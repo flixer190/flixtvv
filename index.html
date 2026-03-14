@@ -942,6 +942,24 @@ img { display: block; max-width: 100%; }
 .youtube-btn { background: #FF0000; }
 .youtube-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
 
+
+.direct-wa-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(37,99,255,0.08);
+  border: 1px solid rgba(37,99,255,0.2);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin: 14px 0;
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.5;
+}
+.direct-wa-info i { color: var(--blue); margin-top: 1px; flex-shrink: 0; }
+.payment-label-row { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.modal-note { text-align: center; font-size: 12px; color: var(--text-subtle); margin-top: 12px; }
+
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -998,7 +1016,7 @@ img { display: block; max-width: 100%; }
   <div class="hero-glow"></div>
   <div class="container">
     <div class="hero-inner">
-      <div class="hero-label"><span class="pulse-dot"></span> ✅ Al 15.000+ tevreden klanten in Nederland</div>
+      <div class="hero-label"><span class="pulse-dot"></span> 📺 Premium TV — Direct actief in Nederland</div>
       <h1>Stop met te veel betalen<br><span class="hero-accent">voor televisie.</span></h1>
       <p class="hero-sub">Kijk alles wat je wil — sport, films, series, Nederlandse zenders — op je tv, telefoon of tablet. Eenmalig betalen, 12 maanden genieten. Geen abonnement. Geen verrassingen.</p>
 
@@ -1093,7 +1111,7 @@ img { display: block; max-width: 100%; }
     <div class="section-header">
       <p class="section-label">Kies je pakket</p>
       <h2 class="section-title">Kies je pakket — alles inbegrepen</h2>
-      <p class="section-sub">Eénmalig betalen, daarna 12 maanden zorgeloos kijken</p>
+      <p class="section-sub">Eénmalig betalen — daarna nooit meer nadenken over je tv</p>
     </div>
 
     <div class="packages-grid single-pkg">
@@ -1135,7 +1153,7 @@ img { display: block; max-width: 100%; }
         <button class="btn-order pkg-btn featured-btn" data-product="Flix TV Premium" data-price="75" data-retail="1800" data-duration="12 maanden">
           <i class="fas fa-shopping-cart"></i> Bestel nu — €75,00
         </button>
-        <div class="pkg-wa">of direct <a href="https://wa.me/31600000000?text=Ik%20wil%20Flix%20TV%20Premium%20bestellen!" target="_blank"><i class="fab fa-whatsapp"></i> via WhatsApp bestellen</a></div>
+        
       </div>
 
     </div>
@@ -1168,7 +1186,7 @@ img { display: block; max-width: 100%; }
               <span class="tier-was">€155,88</span>
             </div>
             <div class="tier-save">Bespaar €116,88</div>
-            <button class="btn-order addon-btn spotify-btn" data-product="Spotify Individueel" data-price="39" data-retail="155.88" data-duration="12 maanden">Toevoegen</button>
+            <button class="btn-order addon-btn spotify-btn" data-product="Spotify Individueel" data-price="39" data-retail="155.88" data-duration="12 maanden">Toevoegen — bespaar €116,88</button>
           </div>
           <div class="addon-tier popular-tier">
             <div class="popular-tier-badge">⭐ Populair</div>
@@ -1181,7 +1199,7 @@ img { display: block; max-width: 100%; }
               <span class="tier-was">€215,88</span>
             </div>
             <div class="tier-save">Bespaar €146,88</div>
-            <button class="btn-order addon-btn spotify-btn" data-product="Spotify Duo" data-price="69" data-retail="215.88" data-duration="12 maanden">Toevoegen</button>
+            <button class="btn-order addon-btn spotify-btn" data-product="Spotify Duo" data-price="69" data-retail="215.88" data-duration="12 maanden">Toevoegen — bespaar €146,88</button>
           </div>
           <div class="addon-tier">
             <div class="addon-tier-info">
@@ -1193,7 +1211,7 @@ img { display: block; max-width: 100%; }
               <span class="tier-was">€263,88</span>
             </div>
             <div class="tier-save">Bespaar €154,88</div>
-            <button class="btn-order addon-btn spotify-btn" data-product="Spotify Familie" data-price="109" data-retail="263.88" data-duration="12 maanden">Toevoegen</button>
+            <button class="btn-order addon-btn spotify-btn" data-product="Spotify Familie" data-price="109" data-retail="263.88" data-duration="12 maanden">Toevoegen — bespaar €154,88</button>
           </div>
         </div>
       </div>
@@ -1218,7 +1236,7 @@ img { display: block; max-width: 100%; }
               <span class="tier-was">€167,88</span>
             </div>
             <div class="tier-save">Bespaar €128,88</div>
-            <button class="btn-order addon-btn youtube-btn" data-product="YouTube Premium Individueel" data-price="39" data-retail="167.88" data-duration="12 maanden">Toevoegen</button>
+            <button class="btn-order addon-btn youtube-btn" data-product="YouTube Premium Individueel" data-price="39" data-retail="167.88" data-duration="12 maanden">Toevoegen — bespaar €128,88</button>
           </div>
           <div class="addon-tier popular-tier">
             <div class="popular-tier-badge">⭐ Populair</div>
@@ -1231,7 +1249,7 @@ img { display: block; max-width: 100%; }
               <span class="tier-was">€239,88</span>
             </div>
             <div class="tier-save">Bespaar €170,88</div>
-            <button class="btn-order addon-btn youtube-btn" data-product="YouTube Premium Duo" data-price="69" data-retail="239.88" data-duration="12 maanden">Toevoegen</button>
+            <button class="btn-order addon-btn youtube-btn" data-product="YouTube Premium Duo" data-price="69" data-retail="239.88" data-duration="12 maanden">Toevoegen — bespaar €170,88</button>
           </div>
           <div class="addon-tier">
             <div class="addon-tier-info">
@@ -1243,7 +1261,7 @@ img { display: block; max-width: 100%; }
               <span class="tier-was">€359,88</span>
             </div>
             <div class="tier-save">Bespaar €240,88</div>
-            <button class="btn-order addon-btn youtube-btn" data-product="YouTube Premium Familie" data-price="119" data-retail="359.88" data-duration="12 maanden">Toevoegen</button>
+            <button class="btn-order addon-btn youtube-btn" data-product="YouTube Premium Familie" data-price="119" data-retail="359.88" data-duration="12 maanden">Toevoegen — bespaar €240,88</button>
           </div>
         </div>
       </div>
@@ -1397,7 +1415,7 @@ img { display: block; max-width: 100%; }
       <div class="footer-brand">
         <span class="logo-icon">▶</span>
         <span class="logo-text">Flix<em>TV</em></span>
-        <p>IPTV voor Nederland. Alles op één plek.</p>
+        <p>Premium televisie voor een eerlijke prijs.</p>
       </div>
       <div class="footer-links">
         <a href="#pakketten">Pakketten</a>
@@ -1426,79 +1444,37 @@ img { display: block; max-width: 100%; }
 <!-- TOAST -->
 <div id="toast" class="toast"></div>
 
-<!-- ORDER MODAL -->
+<!-- ORDER MODAL — direct WhatsApp -->
 <div id="orderModal" class="modal-overlay" style="display:none">
   <div class="modal-box order-box">
     <div class="modal-header">
-      <h2><i class="fas fa-shopping-cart"></i> Jouw bestelling</h2>
+      <h2>📺 Bevestig je bestelling</h2>
       <button id="closeOrderModal" class="close-btn">&times;</button>
     </div>
-
     <div id="orderProduct" class="order-product-summary"></div>
-
-    <!-- Steps -->
-    <div class="steps-bar">
-      <div class="step-dot active" data-step="1"><span>1</span></div>
-      <div class="step-line"></div>
-      <div class="step-dot" data-step="2"><span>2</span></div>
-      <div class="step-line"></div>
-      <div class="step-dot" data-step="3"><span><i class="fab fa-whatsapp"></i></span></div>
+    <div class="direct-wa-info">
+      <i class="fas fa-info-circle"></i>
+      <span>Je wordt doorgestuurd naar WhatsApp. Wij regelen de rest — inclusief installatie.</span>
     </div>
-
-    <!-- Step 1: Gegevens -->
-    <div id="ostep-1" class="step-content active">
-      <p class="step-intro">Vul je gegevens in. Betaling regelen we via WhatsApp.</p>
-      <input type="text" id="oName" placeholder="Volledige naam *" class="form-input">
-      <input type="email" id="oEmail" placeholder="E-mailadres *" class="form-input">
-      <input type="tel" id="oPhone" placeholder="Telefoonnummer (optioneel)" class="form-input">
-      <div class="step-actions">
-        <button id="cancelOrder" class="btn btn-ghost">Annuleren</button>
-        <button id="oGoStep2" class="btn btn-primary">Verder →</button>
-      </div>
-    </div>
-
-    <!-- Step 2: Betaalmethode -->
-    <div id="ostep-2" class="step-content" style="display:none">
-      <p class="step-intro">Hoe wil je betalen?</p>
-      <div class="payment-options">
-        <label class="pay-opt">
-          <input type="radio" name="oPayment" value="PayPal" checked>
-          <span><i class="fab fa-paypal"></i> PayPal</span>
-        </label>
-        <label class="pay-opt">
-          <input type="radio" name="oPayment" value="Bankoverschrijving">
-          <span><i class="fas fa-university"></i> Bankoverschrijving</span>
-        </label>
-        <label class="pay-opt">
-          <input type="radio" name="oPayment" value="Paysafecard">
-          <span><i class="fas fa-ticket-alt"></i> Paysafecard</span>
-        </label>
-      </div>
-      <div class="step-actions">
-        <button id="oBack1" class="btn btn-ghost">← Terug</button>
-        <button id="oGoStep3" class="btn btn-primary">Verder →</button>
-      </div>
-    </div>
-
-    <!-- Step 3: Verstuur -->
-    <div id="ostep-3" class="step-content" style="display:none">
-      <p class="step-intro">Controleer en verstuur via WhatsApp.</p>
-      <div id="oSummary" class="summary-box"></div>
-      <div class="order-savings" id="oSavings" style="display:none">
-        <i class="fas fa-piggy-bank"></i> Jij bespaart <strong id="oSavingsAmt"></strong> tegenover losse abonnementen
-      </div>
-      <label class="terms-check">
-        <input type="checkbox" id="oTerms">
-        <span>Ik ga akkoord met de algemene voorwaarden.</span>
+    <div class="payment-label-row">Hoe wil je betalen?</div>
+    <div class="payment-options">
+      <label class="pay-opt">
+        <input type="radio" name="oPayment" value="PayPal" checked>
+        <span><i class="fab fa-paypal"></i> PayPal</span>
       </label>
-      <div class="step-actions">
-        <button id="oBack2" class="btn btn-ghost" style="width:35%">← Terug</button>
-        <button id="oComplete" class="btn btn-wa-large" style="width:62%" disabled>
-          <i class="fab fa-whatsapp"></i> Bestellen via WhatsApp
-        </button>
-      </div>
+      <label class="pay-opt">
+        <input type="radio" name="oPayment" value="Bankoverschrijving">
+        <span><i class="fas fa-university"></i> Bankoverschrijving</span>
+      </label>
+      <label class="pay-opt">
+        <input type="radio" name="oPayment" value="Paysafecard">
+        <span><i class="fas fa-ticket-alt"></i> Paysafecard</span>
+      </label>
     </div>
-
+    <button id="oComplete" class="btn-wa-large w-full" style="margin-top:16px">
+      <i class="fab fa-whatsapp"></i> Stuur bestelling via WhatsApp
+    </button>
+    <p class="modal-note">✅ Geen account nodig &nbsp;•&nbsp; ✅ Wij helpen met installatie</p>
   </div>
 </div>
 
@@ -1507,8 +1483,8 @@ img { display: block; max-width: 100%; }
   <div class="snackbar-inner">
     <span class="snackbar-icon">📺</span>
     <div class="snackbar-text">
-      <strong>Gratis 24u testen?</strong>
-      <span>Geen betaling — direct actief via WhatsApp.</span>
+      <strong>🎁 Probeer Flix TV gratis — 24 uur!</strong>
+      <span>Stuur één berichtje en wij activeren het gratis voor je.</span>
     </div>
     <a href="https://wa.me/31600000000?text=Hallo%2C%20ik%20wil%20graag%20Flix%20TV%2024u%20gratis%20testen!" class="snackbar-btn" target="_blank">
       <i class="fab fa-whatsapp"></i> Gratis testen
@@ -1579,26 +1555,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Order steps
-  document.getElementById('oGoStep2')?.addEventListener('click', () => {
-    const name = document.getElementById('oName')?.value.trim();
-    const email = document.getElementById('oEmail')?.value.trim();
-    if (!name || !email.includes('@')) { showToast('⚠️ Vul naam en e-mail in.'); return; }
-    goOrderStep(2);
-  });
-  document.getElementById('oBack1')?.addEventListener('click', () => goOrderStep(1));
-  document.getElementById('oGoStep3')?.addEventListener('click', () => {
-    buildSummary();
-    goOrderStep(3);
-  });
-  document.getElementById('oBack2')?.addEventListener('click', () => goOrderStep(2));
-
-  // Terms
-  document.getElementById('oTerms')?.addEventListener('change', e => {
-    const btn = document.getElementById('oComplete');
-    if (btn) btn.disabled = !e.target.checked;
-  });
-
-  // Complete order
+  // Complete order — direct
   document.getElementById('oComplete')?.addEventListener('click', sendWhatsApp);
 
   // FAQ
@@ -1659,7 +1616,6 @@ let currentOrder = null;
 
 function openOrderModal(product) {
   currentOrder = product;
-
   const summaryEl = document.getElementById('orderProduct');
   if (summaryEl) {
     summaryEl.innerHTML = `
@@ -1670,17 +1626,8 @@ function openOrderModal(product) {
       <span class="ops-price">€${product.price.toFixed(2).replace('.',',')}</span>
     `;
   }
-
-  goOrderStep(1);
   const modal = document.getElementById('orderModal');
   if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-
-  // Reset form
-  ['oName','oEmail','oPhone'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
-  const terms = document.getElementById('oTerms');
-  if (terms) terms.checked = false;
-  const completeBtn = document.getElementById('oComplete');
-  if (completeBtn) completeBtn.disabled = true;
 }
 
 function closeOrderModal() {
@@ -1688,64 +1635,9 @@ function closeOrderModal() {
   if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
 }
 
-function goOrderStep(n) {
-  for (let i = 1; i <= 3; i++) {
-    const el = document.getElementById(`ostep-${i}`);
-    if (el) el.style.display = i === n ? 'block' : 'none';
-  }
-  document.querySelectorAll('.step-dot').forEach((dot, idx) => {
-    dot.classList.remove('active','completed');
-    if (idx + 1 === n) dot.classList.add('active');
-    else if (idx + 1 < n) dot.classList.add('completed');
-  });
-}
-
-function buildSummary() {
-  if (!currentOrder) return;
-  const container = document.getElementById('oSummary');
-  const savingsEl = document.getElementById('oSavings');
-  const savingsAmt = document.getElementById('oSavingsAmt');
-  const summaryTotal = document.getElementById('oSummaryTotal');
-
-  if (container) {
-    container.innerHTML = `
-      <div class="summary-row"><span>${currentOrder.name}</span><span>€${currentOrder.price.toFixed(2).replace('.',',')}</span></div>
-      <div class="summary-row"><span>Duur</span><span>${currentOrder.duration}</span></div>
-      <div class="summary-row"><span>Betaalmethode</span><span>${getPayment()}</span></div>
-    `;
-  }
-
-  const saving = currentOrder.retail - currentOrder.price;
-  if (savingsEl && saving > 0) {
-    savingsEl.style.display = 'flex';
-    if (savingsAmt) savingsAmt.textContent = `€${saving.toFixed(2).replace('.',',')}`;
-  }
-}
-
 function getPayment() {
   const sel = document.querySelector('input[name="oPayment"]:checked');
-  return sel ? sel.value : 'Onbekend';
-}
-
-function sendWhatsApp() {
-  if (!currentOrder) return;
-  const name  = document.getElementById('oName')?.value.trim() || '';
-  const email = document.getElementById('oEmail')?.value.trim() || '';
-  const phone = document.getElementById('oPhone')?.value.trim() || '';
-
-  let msg = `👋 Hallo, ik wil graag het volgende bestellen:\n\n`;
-  msg += `📦 *Pakket:* ${currentOrder.name}\n`;
-  msg += `💰 *Prijs:* €${currentOrder.price.toFixed(2)}\n`;
-  msg += `📅 *Duur:* ${currentOrder.duration}\n\n`;
-  msg += `👤 *Mijn gegevens:*\n`;
-  msg += `Naam: ${name}\nE-mail: ${email}`;
-  if (phone) msg += `\nTelefoon: ${phone}`;
-  msg += `\n\n💳 *Betaalmethode:* ${getPayment()}\n\n`;
-  msg += `Graag hoor ik hoe ik verder kan gaan!`;
-
-  window.open(`https://api.whatsapp.com/send?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`, '_blank');
-  closeOrderModal();
-  showToast('✅ Doorgestuurd naar WhatsApp!');
+  return sel ? sel.value : 'PayPal';
 }
 
 /* =========================================================
