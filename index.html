@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flix TV — Stop met te veel betalen voor televisie</title>
-<meta name="description" content="Kijk alles wat je wil voor €75 per jaar. Sport, films, series, alle Nederlandse zenders. Probeer 24u gratis.">
+<title>Flix TV België — Stop met te veel betalen voor televisie</title>
+<meta name="description" content="Kijk alles wat je wil voor €75 per jaar. Sport, films, series, alle Belgische & Nederlandse zenders. Probeer 24u gratis.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -62,13 +62,20 @@ button{font-family:var(--font);cursor:pointer;border:none}
 .hpill i{color:var(--gold);font-size:11px}
 .hbtns{display:flex;flex-wrap:wrap;gap:12px}
 
+/* SOCIAL PROOF TICKER */
+.spticker{display:flex;align-items:center;gap:10px;margin-top:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--rf);padding:9px 16px;max-width:fit-content}
+.spticker .dot-g{width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:bl 1.6s ease-in-out infinite}
+#sptext{font-size:12px;color:rgba(255,255,255,.8);font-weight:600}
+
 /* HERO CARD */
 .hcard{background:#fff;border-radius:var(--r2);padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
 .hcbadge{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:5px 12px;border-radius:var(--rf);margin-bottom:12px}
 .hctitle{font-family:var(--serif);font-size:20px;font-weight:900;color:var(--navy);margin-bottom:4px}
-.hcprice{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.hcprice{display:flex;align-items:baseline;gap:6px;margin-bottom:2px}
 .hcbig{font-family:var(--serif);font-size:52px;font-weight:900;color:var(--navy);line-height:1}
 .hcper{font-size:14px;color:var(--text2);font-weight:600}
+.hcmonth{font-size:12px;color:var(--text3);margin-bottom:4px;font-weight:600}
+.hcmonth strong{color:var(--green);font-size:13px}
 .hcwas{font-size:13px;color:var(--text3);text-decoration:line-through;margin-bottom:6px}
 .hcsave{background:#e8f7ef;border:1px solid #a8e6c0;color:#1a7a45;font-size:13px;font-weight:700;padding:6px 12px;border-radius:6px;margin-bottom:16px;display:inline-block}
 .hcul{list-style:none;margin-bottom:18px}
@@ -78,7 +85,6 @@ button{font-family:var(--font);cursor:pointer;border:none}
 .hcbtn{width:100%;padding:15px;background:var(--red);color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:800;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:9px}
 .hcbtn:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,52,26,.4)}
 .hcnote{text-align:center;font-size:11px;color:var(--text3);margin-top:10px}
-
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:var(--rf);font-weight:700;cursor:pointer;transition:all var(--t);text-decoration:none;font-family:var(--font)}
 .btn-red{background:var(--red);color:#fff;padding:14px 30px;font-size:15px}
@@ -112,6 +118,7 @@ button{font-family:var(--font);cursor:pointer;border:none}
 @keyframes chs{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ch{flex-shrink:0;padding:7px 16px;background:#fff;border:1.5px solid var(--border);border-radius:6px;font-size:12px;font-weight:700;color:var(--text2);white-space:nowrap}
 .ch.s{border-color:rgba(15,39,72,.3);color:var(--navy);background:rgba(15,39,72,.04)}
+.ch.be{border-color:rgba(232,52,26,.3);color:var(--red);background:rgba(232,52,26,.04)}
 
 /* SECTION HEADER */
 .sh{text-align:center;margin-bottom:48px}
@@ -141,7 +148,10 @@ button{font-family:var(--font);cursor:pointer;border:none}
 
 /* PACKAGE */
 .pkgsec{padding:80px 0;background:var(--bg2)}
-.pkgwrap{max-width:620px;margin:0 auto}
+.pkgwrap{max-width:660px;margin:0 auto}
+
+/* BUNDLE UPSELL TOGGLE — verwijderd */
+
 .pkgbox{background:#fff;border-radius:var(--r2);overflow:hidden;box-shadow:0 8px 48px rgba(15,39,72,.12);border:2px solid var(--navy)}
 .pkgtop{background:var(--navy);padding:14px 28px;display:flex;align-items:center;justify-content:space-between}
 .pkgbadge{background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;padding:5px 14px;border-radius:var(--rf);text-transform:uppercase}
@@ -151,12 +161,17 @@ button{font-family:var(--font);cursor:pointer;border:none}
 .pkgname{font-family:var(--serif);font-size:28px;font-weight:900;color:var(--navy)}
 .pkgscr{display:flex;align-items:center;gap:5px;background:var(--bg2);border:1px solid var(--border);padding:6px 12px;border-radius:var(--rf);font-size:12px;font-weight:700;color:var(--text2)}
 .pkgscr i{color:var(--navy);font-size:11px}
-.pkgpr{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.pkgpr{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
 .pkgbig{font-family:var(--serif);font-size:64px;font-weight:900;color:var(--navy);line-height:1}
 .pkgdec{font-family:var(--serif);font-size:28px;font-weight:900;color:var(--navy)}
 .pkgyr{font-size:15px;color:var(--text2);font-weight:600}
 .pkgmo{font-size:14px;color:var(--text2);margin-bottom:8px;font-weight:600}
-.pkgmo strong{color:var(--navy)}
+.pkgmo strong{color:var(--green)}
+
+/* Price breakdown per day — makes it feel tiny */
+.pkgday{font-size:12px;color:var(--text3);margin-bottom:14px;font-weight:600}
+.pkgday strong{color:var(--navy)}
+
 .pkgcmp{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:22px}
 .prow{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:4px 0;color:var(--text2)}
 .prow.th .v{text-decoration:line-through;color:var(--text3)}
@@ -168,6 +183,7 @@ button{font-family:var(--font);cursor:pointer;border:none}
 .pkgfl li{display:flex;align-items:flex-start;gap:9px;font-size:14px;color:var(--text2);padding:7px 0;border-bottom:1px solid var(--bg2);font-weight:500}
 .pkgfl li:last-child{border-bottom:none}
 .pkgfl li i{color:var(--green);font-size:12px;margin-top:2px;flex-shrink:0}
+
 .pkgobtn{width:100%;padding:18px;background:var(--red);color:#fff;border:none;border-radius:var(--r);font-size:17px;font-weight:800;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
 .pkgobtn:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(232,52,26,.4)}
 .pkgwbtn{width:100%;padding:14px;background:var(--green2);color:#fff;border:none;border-radius:var(--r);font-size:14px;font-weight:700;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:8px}
@@ -222,6 +238,7 @@ button{font-family:var(--font);cursor:pointer;border:none}
 .revstars{color:var(--gold);font-size:15px;margin-bottom:12px;letter-spacing:1px}
 .revcard p{font-size:15px;color:var(--text2);line-height:1.7;margin-bottom:14px;position:relative;z-index:1}
 .revname{font-size:12px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px}
+.revloc{font-size:11px;color:var(--text3);margin-top:2px}
 
 /* FAQ */
 .faqsec{padding:80px 0;background:#fff}
@@ -264,15 +281,35 @@ button{font-family:var(--font);cursor:pointer;border:none}
 .toast{position:fixed;bottom:88px;right:24px;background:var(--navy);border-left:3px solid var(--green2);color:#fff;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:600;z-index:9999;transform:translateX(120%);transition:transform .35s cubic-bezier(.4,0,.2,1);max-width:260px;box-shadow:0 8px 30px rgba(0,0,0,.2)}
 .toast.show{transform:translateX(0)}
 
+/* UPSELL POPUP */
+.upov{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);z-index:1100;display:flex;align-items:center;justify-content:center;padding:20px}
+.upbox{background:#fff;border-radius:var(--r2);width:100%;max-width:420px;padding:32px 28px;text-align:center;box-shadow:0 24px 64px rgba(15,39,72,.35);animation:mIn .28s cubic-bezier(.4,0,.2,1);position:relative}
+.upico{font-size:44px;margin-bottom:10px;display:block}
+.uptitle{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--navy);margin-bottom:8px;line-height:1.2}
+.upsub{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:20px}
+.upsave-pill{display:inline-flex;align-items:center;gap:6px;background:#edf9f3;border:1px solid #a8e6c0;color:#1a7a45;font-size:13px;font-weight:700;padding:6px 14px;border-radius:var(--rf);margin-bottom:20px}
+.upopt{display:flex;align-items:center;gap:14px;padding:14px 16px;border:2px solid var(--border);border-radius:var(--r);cursor:pointer;background:#fff;transition:all var(--t);margin-bottom:14px;text-align:left}
+.upopt:hover{border-color:var(--navy);background:var(--bg2)}
+.upopt input[type=radio]{accent-color:var(--navy);width:18px;height:18px;flex-shrink:0}
+.upopt-body{flex:1}
+.upopt-name{font-size:15px;font-weight:700;color:var(--navy)}
+.upopt-sub{font-size:12px;color:var(--text2);margin-top:2px}
+.upopt-price{font-family:var(--serif);font-size:20px;font-weight:900;color:var(--navy);white-space:nowrap}
+.upopt-was{font-size:11px;color:var(--text3);text-decoration:line-through;display:block;text-align:right}
+.up-accept{width:100%;padding:16px;background:var(--red);color:#fff;border:none;border-radius:var(--r);font-size:16px;font-weight:800;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font);margin-bottom:10px}
+.up-accept:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,52,26,.4)}
+.up-skip{width:100%;padding:12px;background:transparent;border:2px solid var(--border);border-radius:var(--r);font-size:13px;font-weight:700;color:var(--text3);cursor:pointer;font-family:var(--font);transition:all var(--t)}
+.up-skip:hover{border-color:var(--text2);color:var(--text2)}
+
 /* MODAL */
 .mov{position:fixed;inset:0;background:rgba(15,39,72,.75);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}
-.mbox{background:#fff;border-radius:var(--r2);width:100%;max-width:440px;overflow:hidden;box-shadow:0 20px 60px rgba(15,39,72,.3);animation:mIn .28s cubic-bezier(.4,0,.2,1)}
+.mbox{background:#fff;border-radius:var(--r2);width:100%;max-width:480px;overflow:hidden;box-shadow:0 20px 60px rgba(15,39,72,.3);animation:mIn .28s cubic-bezier(.4,0,.2,1)}
 @keyframes mIn{from{opacity:0;transform:scale(.94) translateY(12px)}to{opacity:1;transform:scale(1) translateY(0)}}
 .mhead{background:var(--navy);padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
 .mhead h2{font-family:var(--serif);font-size:20px;font-weight:900;color:#fff}
 .mclose{background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);font-size:20px;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--t)}
 .mclose:hover{background:rgba(255,255,255,.2);color:#fff}
-.mbody{padding:24px}
+.mbody{padding:24px;max-height:80vh;overflow-y:auto}
 .mprod{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
 .mprod strong{font-size:15px;font-weight:700;color:var(--navy)}
 .mprod span{font-size:12px;color:var(--text2);display:block;margin-top:2px}
@@ -285,6 +322,7 @@ button{font-family:var(--font);cursor:pointer;border:none}
 .popt:hover{border-color:var(--navy);background:var(--bg2)}
 .popt input{accent-color:var(--navy)}
 .popt i{font-size:17px;color:var(--text3)}
+
 .msend{width:100%;padding:16px;background:var(--green2);color:#fff;border:none;border-radius:var(--r);font-size:16px;font-weight:800;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font)}
 .msend:hover{background:#20bc62;box-shadow:0 8px 24px rgba(37,211,102,.3)}
 .mnote{text-align:center;font-size:11px;color:var(--text3);margin-top:10px}
@@ -343,12 +381,14 @@ button{font-family:var(--font);cursor:pointer;border:none}
     <span>💳 EENMALIGE BETALING</span><span class="ms">•</span>
     <span>📞 GRATIS INSTALLATIEHULP</span><span class="ms">•</span>
     <span>🎁 24U GRATIS TESTEN</span><span class="ms">•</span>
+    <span>🇧🇪 ALLE BELGISCHE ZENDERS</span><span class="ms">•</span>
     <span>📺 25.000+ ZENDERS</span><span class="ms">•</span>
     <span>🏆 ALLE LIVE SPORT</span><span class="ms">•</span>
     <span>✅ 15 DAGEN GELD TERUG</span><span class="ms">•</span>
     <span>💳 EENMALIGE BETALING</span><span class="ms">•</span>
     <span>📞 GRATIS INSTALLATIEHULP</span><span class="ms">•</span>
     <span>🎁 24U GRATIS TESTEN</span><span class="ms">•</span>
+    <span>🇧🇪 ALLE BELGISCHE ZENDERS</span><span class="ms">•</span>
   </div>
 </div>
 
@@ -357,7 +397,7 @@ button{font-family:var(--font);cursor:pointer;border:none}
   <div class="container">
     <nav class="nav">
       <div class="logo">
-        <div class="lm">▶</div>
+        <div class="lm">▶️</div>
         <div class="ln">Flix<em>TV</em></div>
       </div>
       <ul class="navl" id="navLinks">
@@ -383,12 +423,12 @@ button{font-family:var(--font);cursor:pointer;border:none}
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hlabel"><span class="dot"></span> 15.000+ tevreden klanten </div>
+        <div class="hlabel"><span class="dot"></span> 8.500+ tevreden klanten in België</div>
         <h1>Stop met te veel betalen<br>voor <span>televisie.</span></h1>
-        <p class="hsub">Kijk alles wat je wil — sport, films, series en alle Nederlandse zenders — op je tv, telefoon of tablet. <strong>Eenmalig €75 betalen. 12 maanden genieten.</strong></p>
+        <p class="hsub">Kijk alles wat je wil — sport, films, series en alle Belgische &amp; Nederlandse zenders — op je tv, telefoon of tablet. <strong>Eenmalig €75 betalen. 12 maanden genieten.</strong></p>
         <div class="hpills">
           <span class="hpill"><i class="fas fa-check-circle"></i> Geen abonnement</span>
-          <span class="hpill"><i class="fas fa-check-circle"></i> Geen incasso</span>
+          <span class="hpill"><i class="fas fa-check-circle"></i> Geen domiciliëring</span>
           <span class="hpill"><i class="fas fa-check-circle"></i> Gratis installatiehulp</span>
           <span class="hpill"><i class="fas fa-check-circle"></i> 15 dagen geld terug</span>
         </div>
@@ -396,20 +436,26 @@ button{font-family:var(--font);cursor:pointer;border:none}
           <button class="btn btn-red btn-lg btn-order-trigger"><i class="fas fa-tv"></i> Bestel nu — €75,00</button>
           <a href="https://wa.me/31600000000?text=Hallo%2C%20ik%20wil%20Flix%20TV%2024u%20gratis%20testen!" class="btn btn-out btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> Gratis 24u testen</a>
         </div>
+        <div class="spticker">
+          <span class="dot-g"></span>
+          <span id="sptext">Mohammed uit Antwerpen bestelde 4 minuten geleden</span>
+        </div>
       </div>
       <div class="hcard">
-        <div class="hcbadge"><i class="fas fa-star"></i> Meest gekozen</div>
+        <div class="hcbadge"><i class="fas fa-star"></i> Meest gekozen in België</div>
         <div class="hctitle">Flix TV Premium</div>
         <div class="hcprice"><span class="hcbig">€75</span><span class="hcper">/ jaar</span></div>
+        <div class="hcmonth">Dat is slechts <strong>€6,25 per maand</strong></div>
+        <div class="hcmonth" style="font-size:11px;margin-bottom:6px">of <strong style="color:var(--navy)">€0,21 per dag</strong> — minder dan een kop koffie ☕</div>
         <div class="hcwas">Normaal: €1.800,00+ aan losse diensten</div>
         <div class="hcsave">💰 Jij bespaart €1.725,00+ per jaar</div>
         <ul class="hcul">
           <li><i class="fas fa-check"></i> 25.000+ TV-kanalen wereldwijd</li>
+          <li><i class="fas fa-check"></i> 🇧🇪 Alle Belgische zenders inbegrepen</li>
           <li><i class="fas fa-check"></i> Alle live sport inbegrepen</li>
           <li><i class="fas fa-check"></i> 69.000+ films &amp; series</li>
           <li><i class="fas fa-check"></i> HD / 4K / 8K kwaliteit</li>
           <li><i class="fas fa-check"></i> Op 2 schermen tegelijk</li>
-          <li><i class="fas fa-check"></i> Gratis installatiehulp</li>
         </ul>
         <button class="hcbtn btn-order-trigger"><i class="fas fa-shopping-cart"></i> Bestel nu — €75,00</button>
         <div class="hcnote">✅ 15 dagen geld terug &nbsp;•&nbsp; ✅ Direct actief</div>
@@ -442,25 +488,29 @@ button{font-family:var(--font);cursor:pointer;border:none}
       <div class="pstars">★★★★★</div>
       <div class="ptxt"><strong>4,9 / 5</strong> gemiddelde beoordeling</div>
       <div class="pdiv"></div>
-      <div class="ptxt"><strong>15.000+</strong> tevreden klanten</div>
+      <div class="ptxt"><strong>8.500+</strong> tevreden klanten in België</div>
       <div class="pdiv"></div>
-      <div class="ptxt">Al meer dan <strong>3 jaar</strong> actief </div>
+      <div class="ptxt">Al meer dan <strong>3 jaar</strong> actief in België</div>
     </div>
   </div>
 </div>
 
 <!-- CHANNELS -->
 <div class="chstrip">
-  <div class="chlabel">Inclusief alle grote zenders &amp; sporten</div>
+  <div class="chlabel">Inclusief alle Belgische, Nederlandse &amp; internationale zenders</div>
   <div><div class="chtrack">
-    <div class="ch">NPO 1</div><div class="ch">NPO 2</div><div class="ch">RTL 4</div><div class="ch">SBS 6</div>
-    <div class="ch s">Eredivisie</div><div class="ch s">Champions League</div>
+    <div class="ch be">VRT 1</div><div class="ch be">VTM</div><div class="ch be">Play 4</div><div class="ch be">RTBF</div>
+    <div class="ch be">La Une</div><div class="ch be">VRT Canvas</div>
+    <div class="ch">NPO 1</div><div class="ch">RTL 4</div>
+    <div class="ch s">Jupiler Pro League</div><div class="ch s">Champions League</div>
     <div class="ch s">Premier League</div><div class="ch s">Formule 1</div>
     <div class="ch">BBC</div><div class="ch">CNN</div>
     <div class="ch s">La Liga</div><div class="ch s">Serie A</div><div class="ch s">Bundesliga</div>
     <div class="ch">Discovery</div><div class="ch s">NBA</div><div class="ch s">NFL</div>
-    <div class="ch">NPO 1</div><div class="ch">NPO 2</div><div class="ch">RTL 4</div><div class="ch">SBS 6</div>
-    <div class="ch s">Eredivisie</div><div class="ch s">Champions League</div>
+    <div class="ch be">VRT 1</div><div class="ch be">VTM</div><div class="ch be">Play 4</div><div class="ch be">RTBF</div>
+    <div class="ch be">La Une</div><div class="ch be">VRT Canvas</div>
+    <div class="ch">NPO 1</div><div class="ch">RTL 4</div>
+    <div class="ch s">Jupiler Pro League</div><div class="ch s">Champions League</div>
     <div class="ch s">Premier League</div><div class="ch s">Formule 1</div>
     <div class="ch">BBC</div><div class="ch">CNN</div>
     <div class="ch s">La Liga</div><div class="ch s">Serie A</div><div class="ch s">Bundesliga</div>
@@ -474,11 +524,11 @@ button{font-family:var(--font);cursor:pointer;border:none}
     <div class="wgrid">
       <div>
         <div class="wlbl">Waarom Flix TV?</div>
-        <h2 class="wh">Betaal niet langer te veel voor televisie.</h2>
-        <p class="wbody">De meeste mensen betalen €50 tot €80 per maand aan Ziggo, KPN, Telenet. Dat is meer dan €900 per jaar. Met Flix TV betaal je eenmalig €75 en kijk je 12 maanden alles: sport, films, series en alle Nederlandse zenders. Op je eigen tv, telefoon of tablet.</p>
+        <h2 class="wh">Betaal niet langer te veel aan Telenet of VOO.</h2>
+        <p class="wbody">De meeste Belgen betalen €50 tot €90 per maand aan Telenet, VOO of Orange. Dat is meer dan €1.000 per jaar. Met Flix TV betaal je eenmalig €75 en kijk je 12 maanden alles: sport, films, series en alle Belgische en Nederlandse zenders. Op je eigen tv, telefoon of tablet.</p>
         <div class="cmp">
-          <div class="crow bad"><i class="fas fa-times-circle"></i><span>Ziggo / KPN / Telenet abonnement</span><strong>€600–€960 / jaar</strong></div>
-          <div class="crow bad"><i class="fas fa-times-circle"></i><span>Netflix + ESPN + Viaplay los</span><strong>€500+ / jaar</strong></div>
+          <div class="crow bad"><i class="fas fa-times-circle"></i><span>Telenet / VOO / Orange abonnement</span><strong>€720–€1.080 / jaar</strong></div>
+          <div class="crow bad"><i class="fas fa-times-circle"></i><span>Netflix + Streamz + Play Sport los</span><strong>€600+ / jaar</strong></div>
           <div class="crow good"><i class="fas fa-check-circle"></i><span>Flix TV — alles inbegrepen</span><strong>€75 / jaar</strong></div>
         </div>
       </div>
@@ -502,43 +552,48 @@ button{font-family:var(--font);cursor:pointer;border:none}
       <h2>Alles inbegrepen. Één eerlijke prijs.</h2>
       <p>Geen kleine lettertjes. Geen verborgen kosten. Gewoon betalen en kijken.</p>
     </div>
+
     <div class="pkgwrap">
       <div class="pkgbox">
         <div class="pkgtop">
-          <div class="pkgbadge">🏆 Meest gekozen</div>
-          <div class="pkgpop"><i class="fas fa-fire"></i> 15.000+ klanten gingen je voor</div>
+          <div class="pkgbadge" id="pkg-badge">🏆 Meest gekozen</div>
+          <div class="pkgpop"><i class="fas fa-fire"></i> <span>8.500+ Belgische klanten gingen je voor</span></div>
         </div>
         <div class="pkgbody">
           <div class="pkgnr">
             <div class="pkgname">Flix TV Premium</div>
             <div class="pkgscr"><i class="fas fa-tv"></i><i class="fas fa-tv"></i> 2 schermen</div>
           </div>
+
           <div class="pkgpr">
             <div class="pkgbig">€75</div><div class="pkgdec">,00</div><div class="pkgyr">/ jaar</div>
           </div>
           <div class="pkgmo">Omgerekend slechts <strong>€6,25 per maand</strong></div>
+          <div class="pkgday">Of <strong>€0,21 per dag</strong> — minder dan een kop koffie ☕</div>
+
           <div class="pkgcmp">
             <div class="prow th"><span>Normaal (losse diensten):</span><span class="v">€1.800,00+ / jaar</span></div>
             <div class="prow ou"><span>Onze prijs:</span><span class="v">€75,00 / jaar</span></div>
             <div class="psave"><i class="fas fa-piggy-bank"></i> Jij bespaart <strong>€1.725,00+ per jaar</strong></div>
           </div>
+
           <div class="pkgfl">
             <ul>
               <li><i class="fas fa-check"></i> 12 maanden toegang</li>
               <li><i class="fas fa-check"></i> 25.000+ TV-kanalen</li>
               <li><i class="fas fa-check"></i> 69.000+ films &amp; series</li>
               <li><i class="fas fa-check"></i> Alle live sport inbegrepen</li>
-              <li><i class="fas fa-check"></i> Eredivisie &amp; Champions League</li>
+              <li><i class="fas fa-check"></i> 🇧🇪 Alle Belgische zenders</li>
             </ul>
             <ul>
-              <li><i class="fas fa-check"></i> Formule 1 &amp; Premier League</li>
+              <li><i class="fas fa-check"></i> Jupiler Pro League</li>
               <li><i class="fas fa-check"></i> HD / Full HD / 4K / 8K</li>
               <li><i class="fas fa-check"></i> EPG &amp; Catch-up</li>
               <li><i class="fas fa-check"></i> Gratis IBO Player 🎁</li>
               <li><i class="fas fa-check"></i> Gratis installatiehulp</li>
             </ul>
           </div>
-          <button class="pkgobtn btn-order-trigger"><i class="fas fa-shopping-cart"></i> Bestel nu — €75,00</button>
+          <button class="pkgobtn btn-order-trigger" data-product="Flix TV Premium" data-price="75" data-retail="1800" data-duration="12 maanden"><i class="fas fa-shopping-cart"></i> Bestel nu — €75,00</button>
           <button class="pkgwbtn" onclick="window.open('https://wa.me/31600000000?text=Hallo%2C%20ik%20wil%20graag%20Flix%20TV%2024u%20gratis%20testen!','_blank')">
             <i class="fab fa-whatsapp"></i> Liever eerst gratis testen?
           </button>
@@ -552,8 +607,9 @@ button{font-family:var(--font);cursor:pointer;border:none}
 <!-- ADD-ONS -->
 <section class="addonsec">
   <div class="container">
-    <div class="addiv">Combineer met een add-on</div>
+    <div class="addiv">Voeg toe aan je pakket &amp; bespaar nog meer</div>
     <div class="adgrid">
+      <!-- Spotify -->
       <div class="adcard">
         <div class="adhead">
           <div class="adico si"><i class="fab fa-spotify"></i></div>
@@ -564,23 +620,24 @@ button{font-family:var(--font);cursor:pointer;border:none}
             <div class="at-top"><span class="at-name">Individueel</span><span class="at-badge">1 account</span></div>
             <div class="at-pr"><span class="at-price">€39,00</span><span class="at-was">€155,88</span></div>
             <div class="at-save">✓ Jij bespaart €116,88</div>
-            <button class="at-btn sp-btn btn-order-trigger" data-product="Spotify Individueel" data-price="39" data-retail="155.88" data-duration="12 maanden">Toevoegen — bespaar €116,88</button>
+            <button class="at-btn sp-btn btn-order-trigger" data-product="Spotify Premium Individueel" data-price="39" data-retail="155.88" data-duration="12 maanden">Toevoegen — bespaar €116,88</button>
           </div>
           <div class="at hot">
             <div class="at-hot">⭐ Meest gekozen</div>
             <div class="at-top"><span class="at-name">Duo</span><span class="at-badge">2 accounts</span></div>
             <div class="at-pr"><span class="at-price">€69,00</span><span class="at-was">€215,88</span></div>
             <div class="at-save">✓ Jij bespaart €146,88</div>
-            <button class="at-btn sp-btn btn-order-trigger" data-product="Spotify Duo" data-price="69" data-retail="215.88" data-duration="12 maanden">Toevoegen — bespaar €146,88</button>
+            <button class="at-btn sp-btn btn-order-trigger" data-product="Spotify Premium Duo" data-price="69" data-retail="215.88" data-duration="12 maanden">Toevoegen — bespaar €146,88</button>
           </div>
           <div class="at">
             <div class="at-top"><span class="at-name">Familie</span><span class="at-badge">6 accounts</span></div>
             <div class="at-pr"><span class="at-price">€109,00</span><span class="at-was">€263,88</span></div>
             <div class="at-save">✓ Jij bespaart €154,88</div>
-            <button class="at-btn sp-btn btn-order-trigger" data-product="Spotify Familie" data-price="109" data-retail="263.88" data-duration="12 maanden">Toevoegen — bespaar €154,88</button>
+            <button class="at-btn sp-btn btn-order-trigger" data-product="Spotify Premium Familie" data-price="109" data-retail="263.88" data-duration="12 maanden">Toevoegen — bespaar €154,88</button>
           </div>
         </div>
       </div>
+      <!-- YouTube -->
       <div class="adcard">
         <div class="adhead">
           <div class="adico yi"><i class="fab fa-youtube"></i></div>
@@ -631,12 +688,12 @@ button{font-family:var(--font);cursor:pointer;border:none}
 <!-- REVIEWS -->
 <section id="reviews" class="revsec">
   <div class="container">
-    <div class="sh"><span class="lbl">Klantreviews</span><h2>Wat onze klanten zeggen</h2></div>
+    <div class="sh"><span class="lbl">Klantreviews</span><h2>Wat onze Belgische klanten zeggen</h2></div>
     <div class="revgrid">
-      <div class="revcard"><div class="revstars">★★★★★</div><p>"Eindelijk geen duur Ziggo abonnement meer. Alle wedstrijden, alle kanalen — gewoon via mijn tv. Werkt perfect."</p><div class="revname">— Ahmed B., Amsterdam</div></div>
-      <div class="revcard"><div class="revstars">★★★★★</div><p>"Eerst twijfelde ik, maar na de gratis test was ik direct overtuigd. Heb mijn abonnement opgezegd en bespaar nu honderden euro's per jaar."</p><div class="revname">— Peter V., Rotterdam</div></div>
-      <div class="revcard"><div class="revstars">★★★★★</div><p>"Via WhatsApp heel persoonlijk geholpen. Ze installeerden alles op mijn tv. Nooit gedacht dat het zo makkelijk kon."</p><div class="revname">— Sandra K., Utrecht</div></div>
-      <div class="revcard"><div class="revstars">★★★★★</div><p>"Alle grote wedstrijden, Formule 1, en gewoon NPO en RTL — alles op één plek. Mijn man en ik zijn er heel blij mee."</p><div class="revname">— Marianne D., Den Haag</div></div>
+      <div class="revcard"><div class="revstars">★★★★★</div><p>"Eindelijk geen duur Telenet abonnement meer. Alle wedstrijden, alle kanalen — gewoon via mijn tv. VRT, VTM, alles erbij. Werkt perfect."</p><div class="revname">— Ahmed B.</div><div class="revloc">📍 Antwerpen</div></div>
+      <div class="revcard"><div class="revstars">★★★★★</div><p>"Eerst twijfelde ik, maar na de gratis test was ik direct overtuigd. Heb mijn VOO abonnement opgezegd en bespaar nu honderden euro's per jaar."</p><div class="revname">— Peter V.</div><div class="revloc">📍 Gent</div></div>
+      <div class="revcard"><div class="revstars">★★★★★</div><p>"Via WhatsApp heel persoonlijk geholpen. Ze installeerden alles op mijn smart tv. Jupiler Pro League, Champions League — alles erop. Nooit gedacht dat het zo makkelijk kon."</p><div class="revname">— Sandra K.</div><div class="revloc">📍 Brussel</div></div>
+      <div class="revcard"><div class="revstars">★★★★★</div><p>"La Une, RTL-TVI, Canvas — en alle grote sportwedstrijden erbij. Mijn man en ik zijn er heel blij mee. Orange mag ons niet meer."</p><div class="revname">— Marianne D.</div><div class="revloc">📍 Luik</div></div>
     </div>
   </div>
 </section>
@@ -647,11 +704,12 @@ button{font-family:var(--font);cursor:pointer;border:none}
     <div class="sh"><span class="lbl">Veelgestelde vragen</span><h2>Heb je een vraag?</h2></div>
     <div class="faqlist">
       <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Wat is Flix TV precies?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Flix TV is televisie via het internet. Je kijkt via een gratis app op je Smart TV, telefoon of tablet. Geen schotel, geen antenne, geen gedoe. Gewoon aanzetten en kijken.</p></div></div>
+      <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Zitten de Belgische zenders erbij? (VRT, VTM, RTBF…)</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Ja! Alle grote Belgische zenders zijn inbegrepen: VRT 1, VRT Canvas, VTM, Play 4, Play 5, RTBF, La Une, La Deux, RTL-TVI en veel meer — zowel Nederlandstalig als Franstalig.</p></div></div>
       <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Op welke apparaten werkt het?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Flix TV werkt op bijna elk apparaat: Smart TV, telefoon, tablet, laptop en Fire Stick. Weet je niet hoe je het installeert? Geen probleem — wij helpen je stap voor stap via WhatsApp.</p></div></div>
-      <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Hoe werkt de betaling?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Betaling gaat altijd via WhatsApp — veilig en persoonlijk. Je betaalt eenmalig voor 12 maanden via PayPal, Bankoverschrijving of Paysafecard. Geen automatische incasso, geen verrassingen.</p></div></div>
+      <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Hoe werkt de betaling?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Betaling gaat altijd via WhatsApp — veilig en persoonlijk. Je betaalt eenmalig voor 12 maanden via PayPal, Bankoverschrijving of Paysafecard. Geen domiciliëring, geen verrassingen.</p></div></div>
       <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Kan ik eerst gratis testen?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Ja! Stuur ons een bericht via WhatsApp en wij sturen je een gratis 24u testaccount. Geen betaling, geen verplichtingen. Zo kun je zelf zien hoe goed het werkt.</p></div></div>
       <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Wat als ik niet tevreden ben?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Geen probleem. Wij bieden 15 dagen geld-teruggarantie. Neem contact op via WhatsApp en wij betalen je volledig terug, zonder vragen.</p></div></div>
-      <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Zit de Eredivisie en Champions League erbij?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Ja. Alle grote sporten zijn inbegrepen: Eredivisie, Champions League, Premier League, Formule 1, La Liga, Bundesliga, NBA, NFL en veel meer — zonder extra abonnement.</p></div></div>
+      <div class="faqitem"><button class="faqq" aria-expanded="false"><span>Zit de Jupiler Pro League en Champions League erbij?</span><i class="fas fa-plus"></i></button><div class="faqa"><p>Ja. Alle grote sporten zijn inbegrepen: Jupiler Pro League, Champions League, Premier League, Formule 1, La Liga, Bundesliga, NBA, NFL en veel meer — zonder extra abonnement.</p></div></div>
     </div>
   </div>
 </section>
@@ -676,8 +734,8 @@ button{font-family:var(--font);cursor:pointer;border:none}
   <div class="container">
     <div class="footin">
       <div class="footbrand">
-        <div class="logo"><div class="lm">▶</div><div class="ln">Flix<em>TV</em></div></div>
-        <p>Premium televisie voor een eerlijke prijs. Al 3 jaar actief.</p>
+        <div class="logo"><div class="lm">▶️</div><div class="ln">Flix<em>TV</em></div></div>
+        <p>Premium televisie voor een eerlijke prijs. Al 3 jaar actief in België.</p>
       </div>
       <div class="footlinks">
         <a href="#pakketten">Pakket</a>
@@ -686,12 +744,25 @@ button{font-family:var(--font);cursor:pointer;border:none}
       </div>
       <a href="https://wa.me/31600000000" class="fwa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp ons</a>
     </div>
-    <div class="footbot">© 2025 Flix TV. Alle prijzen zijn eenmalig voor 12 maanden.</div>
+    <div class="footbot">©️ 2025 Flix TV België. Alle prijzen zijn eenmalig voor 12 maanden.</div>
   </div>
 </footer>
 
 <a href="https://wa.me/31600000000" class="wafloat" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="wapulse"></span></a>
 <div id="toast" class="toast"></div>
+
+<!-- UPSELL POPUP (verschijnt eerst, vóór het order modal) -->
+<div id="upsellPopup" class="upov" style="display:none">
+  <div class="upbox">
+    <span class="upico" id="up-ico">📺</span>
+    <h3 class="uptitle" id="up-title">Alles in één app? 🍿</h3>
+    <p class="upsub" id="up-sub">Voeg toe en bespaar nog meer.</p>
+    <div class="upsave-pill" id="up-savepill"><i class="fas fa-piggy-bank"></i> <span id="up-savetext">Bespaar tot €170+</span></div>
+    <div id="up-opts"></div>
+    <button class="up-accept" id="up-accept"><i class="fas fa-cart-plus"></i> Ja, voeg toe en bespaar!</button>
+    <button class="up-skip" id="up-skip">NEE BEDANKT — GA DOOR NAAR BESTELLING</button>
+  </div>
+</div>
 
 <!-- ORDER MODAL -->
 <div id="orderModal" class="mov" style="display:none">
@@ -699,6 +770,7 @@ button{font-family:var(--font);cursor:pointer;border:none}
     <div class="mhead"><h2>Bevestig je bestelling</h2><button id="closeModal" class="mclose">&times;</button></div>
     <div class="mbody">
       <div id="mProduct" class="mprod"></div>
+      <div id="mSavings" class="minfo" style="display:none"><i class="fas fa-piggy-bank"></i> <span id="mSavingsText"></span></div>
       <div class="minfo"><i class="fas fa-info-circle"></i> Je wordt doorgestuurd naar WhatsApp. Wij regelen de rest — inclusief installatie op je tv.</div>
       <div class="paylbl">Hoe wil je betalen?</div>
       <div class="payopts">
@@ -738,34 +810,205 @@ button{font-family:var(--font);cursor:pointer;border:none}
 <script>
 'use strict';
 const WA='31600000000';
-let cur=null;
+let cur=null;          // het aangeklikte product
+let upsellChosen=[];   // gekozen extra's vanuit upsell popup
 
-// Hamburger
+/* ── HAMBURGER ── */
 const hbg=document.getElementById('hbg'),nl=document.getElementById('navLinks');
 hbg?.addEventListener('click',()=>{hbg.classList.toggle('active');nl?.classList.toggle('active')});
 nl?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('active');nl.classList.remove('active')}));
-
-// Header shadow
 window.addEventListener('scroll',()=>{document.getElementById('hdr')?.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
 
-// Order triggers
+/* ── SOCIAL PROOF TICKER ── */
+const spMsgs=[
+  'Mohammed uit Antwerpen bestelde 4 minuten geleden',
+  'Sandra uit Gent bestelde 7 minuten geleden',
+  'Peter uit Brussel test nu gratis',
+  'Fatima uit Luik bestelde 12 minuten geleden',
+  'Jan uit Brugge bestelde 2 minuten geleden',
+  'Marie uit Charleroi test nu gratis',
+  'Ahmed uit Mechelen bestelde zojuist',
+  'Nathalie uit Namen bestelde 9 minuten geleden',
+  'Kevin uit Leuven test nu gratis',
+  'Sofie uit Hasselt bestelde 6 minuten geleden',
+];
+let spIdx=0;
+function rotateSP(){
+  const el=document.getElementById('sptext');
+  if(!el)return;
+  el.style.opacity='0';
+  setTimeout(()=>{
+    spIdx=(spIdx+1)%spMsgs.length;
+    el.textContent=spMsgs[spIdx];
+    el.style.transition='opacity .5s';
+    el.style.opacity='1';
+  },400);
+}
+setInterval(rotateSP,5000);
+
+/* ── UPSELL DEFINITIES ──
+   Per product 1 relevante upsell popup tonen (de meest impactvolle).
+   Daarna volgt het order modal.
+   Flix TV  → toon Spotify Duo als upsell
+   Spotify  → toon Flix TV Premium als upsell
+   YouTube  → toon Flix TV Premium als upsell
+*/
+const upsellDefs={
+  flixTV:{
+    ico:'🎧',
+    title:'Geen reclame tijdens je favoriete nummers?',
+    sub:'Voeg Spotify toe en luister onbeperkt, reclamevrij — op je eigen account.',
+    opts:[
+      {name:'Spotify Premium Individueel', price:39,  retail:155.88, sub:'1 account · 12 maanden'},
+      {name:'Spotify Premium Duo',         price:69,  retail:215.88, sub:'2 accounts · 12 maanden', default:true},
+      {name:'Spotify Premium Familie',     price:109, retail:263.88, sub:'6 accounts · 12 maanden'},
+    ]
+  },
+  spotify:{
+    ico:'📺',
+    title:'Alles in één app? 🍿',
+    sub:'Bespaar €1.700+ per jaar met Flix TV — 25.000+ zenders, live sport & films.',
+    opts:[
+      {name:'Flix TV Premium', price:75, retail:1800, sub:'25.000+ zenders · live sport · 12 maanden', default:true},
+    ]
+  },
+  youtube:{
+    ico:'📺',
+    title:'Alles in één app? 🍿',
+    sub:'Bespaar €1.700+ per jaar met Flix TV — 25.000+ zenders, live sport & films.',
+    opts:[
+      {name:'Flix TV Premium', price:75, retail:1800, sub:'25.000+ zenders · live sport · 12 maanden', default:true},
+    ]
+  },
+};
+
+function getUpsellKey(name){
+  if(name.includes('Flix TV')) return 'flixTV';
+  if(name.includes('Spotify')) return 'spotify';
+  if(name.includes('YouTube')) return 'youtube';
+  return 'flixTV';
+}
+
+/* ── ORDER TRIGGERS ── */
 document.querySelectorAll('.btn-order-trigger').forEach(btn=>{
   btn.addEventListener('click',()=>{
     const p=btn.dataset.product||'Flix TV Premium';
     const price=parseFloat(btn.dataset.price)||75;
     const retail=parseFloat(btn.dataset.retail)||1800;
     const dur=btn.dataset.duration||'12 maanden';
-    openModal({p,price,retail,dur});
+    cur={p,price,retail,dur};
+    upsellChosen=[];
+    showUpsellPopup();
   });
 });
 
-function openModal(prod){
-  cur=prod;
+/* ── STAP 1: UPSELL POPUP ── */
+function showUpsellPopup(){
+  const key=getUpsellKey(cur.p);
+  const def=upsellDefs[key];
+  if(!def){openOrderModal();return;}
+
+  // Header
+  document.getElementById('up-ico').textContent=def.ico;
+  document.getElementById('up-title').textContent=def.title;
+  document.getElementById('up-sub').textContent=def.sub;
+
+  // Bereken max besparing voor savepill
+  const maxSave=Math.max(...def.opts.map(o=>o.retail-o.price));
+  document.getElementById('up-savetext').textContent=`Bespaar €${maxSave.toFixed(0)}+ extra`;
+
+  // Render radio opties
+  const container=document.getElementById('up-opts');
+  container.innerHTML=def.opts.map((o,i)=>`
+    <label class="upopt">
+      <input type="radio" name="upsel" value="${o.name}" data-price="${o.price}" data-retail="${o.retail}" ${o.default||i===0?'checked':''}>
+      <div class="upopt-body">
+        <div class="upopt-name">${o.name}</div>
+        <div class="upopt-sub">${o.sub}</div>
+      </div>
+      <div>
+        <span class="upopt-price">€${o.price.toFixed(2).replace('.',',')}</span>
+        <span class="upopt-was">€${o.retail.toFixed(2).replace('.',',')}</span>
+      </div>
+    </label>
+  `).join('');
+
+  document.getElementById('upsellPopup').style.display='flex';
+  document.body.style.overflow='hidden';
+}
+
+function closeUpsellPopup(){
+  document.getElementById('upsellPopup').style.display='none';
+}
+
+// Accepteer upsell
+document.getElementById('up-accept')?.addEventListener('click',()=>{
+  const sel=document.querySelector('input[name="upsel"]:checked');
+  if(sel){
+    upsellChosen=[{
+      name:sel.value,
+      price:parseFloat(sel.dataset.price),
+      retail:parseFloat(sel.dataset.retail)
+    }];
+  }
+  closeUpsellPopup();
+  openOrderModal();
+});
+
+// Sla upsell over
+document.getElementById('up-skip')?.addEventListener('click',()=>{
+  upsellChosen=[];
+  closeUpsellPopup();
+  openOrderModal();
+});
+
+// Klik buiten popup
+document.getElementById('upsellPopup')?.addEventListener('click',e=>{
+  if(e.target.id==='upsellPopup'){
+    upsellChosen=[];
+    closeUpsellPopup();
+    openOrderModal();
+  }
+});
+
+/* ── STAP 2: ORDER MODAL ── */
+function openOrderModal(){
+  if(!cur) return;
+
+  // Totaal berekenen incl. upsells
+  const upsellTotal=upsellChosen.reduce((s,u)=>s+u.price,0);
+  const grandTotal=cur.price+upsellTotal;
+
+  // Product header
   const el=document.getElementById('mProduct');
-  if(el) el.innerHTML=`<div><strong>${prod.p}</strong><span>${prod.dur}</span></div><span class="mprice">€${prod.price.toFixed(2).replace('.',',')}</span>`;
+  const items=[{name:cur.p,price:cur.price},...upsellChosen];
+  el.innerHTML=items.map((it,i)=>`
+    <div style="${i>0?'border-top:1px solid var(--border);padding-top:8px;margin-top:8px':''}">
+      <strong>${it.name}</strong>
+      <span>12 maanden</span>
+    </div>
+    <span class="mprice" style="font-size:${i>0?'18px':'26px'}">€${it.price.toFixed(2).replace('.',',')}</span>
+  `).join('');
+
+  // Besparingsbanner
+  const savEl=document.getElementById('mSavings');
+  const savTxt=document.getElementById('mSavingsText');
+  if(upsellChosen.length>0){
+    const totalRetail=cur.retail+upsellChosen.reduce((s,u)=>s+u.retail,0);
+    const saving=totalRetail-grandTotal;
+    savTxt.textContent=`💰 Jij bespaart €${saving.toFixed(2).replace('.',',')} ten opzichte van normale prijzen`;
+    savEl.style.display='flex';
+    savEl.style.background='#edf9f3';
+    savEl.style.borderColor='#a8e6c0';
+    savEl.style.color='#0f4a2a';
+  } else {
+    savEl.style.display='none';
+  }
+
   document.getElementById('orderModal').style.display='flex';
   document.body.style.overflow='hidden';
 }
+
 function closeModal(){
   document.getElementById('orderModal').style.display='none';
   document.body.style.overflow='';
@@ -776,14 +1019,22 @@ document.getElementById('orderModal')?.addEventListener('click',e=>{if(e.target.
 document.getElementById('sendOrder')?.addEventListener('click',()=>{
   if(!cur)return;
   const pay=document.querySelector('input[name="pay"]:checked')?.value||'PayPal';
+  const upsellTotal=upsellChosen.reduce((s,u)=>s+u.price,0);
+  const grandTotal=cur.price+upsellTotal;
+
   let msg=`👋 Hallo! Ik wil graag het volgende bestellen:\n\n`;
-  msg+=`📦 *Pakket:* ${cur.p}\n💰 *Prijs:* €${cur.price.toFixed(2)}\n📅 *Duur:* ${cur.dur}\n💳 *Betaalmethode:* ${pay}\n\nGraag hoor ik hoe ik verder kan gaan. Bedankt!`;
-  window.open(`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`, '_blank');
+  msg+=`📦 *Pakket:* ${cur.p} — €${cur.price.toFixed(2)}\n`;
+  upsellChosen.forEach(u=>{ msg+=`➕ *Extra:* ${u.name} — €${u.price.toFixed(2)}\n`; });
+  msg+=`\n💰 *Totaal:* €${grandTotal.toFixed(2)}\n`;
+  msg+=`📅 *Duur:* ${cur.dur}\n`;
+  msg+=`💳 *Betaalmethode:* ${pay}\n\n`;
+  msg+=`Graag hoor ik hoe ik verder kan gaan. Bedankt!`;
+  window.open(`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`,'_blank');
   closeModal();
   showToast('✅ Doorgestuurd naar WhatsApp!');
 });
 
-// FAQ
+/* ── FAQ ── */
 document.querySelectorAll('.faqq').forEach(btn=>{
   btn.addEventListener('click',()=>{
     const open=btn.getAttribute('aria-expanded')==='true';
@@ -792,7 +1043,7 @@ document.querySelectorAll('.faqq').forEach(btn=>{
   });
 });
 
-// Snackbar 8s
+/* ── SNACKBAR 8s ── */
 if(!sessionStorage.getItem('sbS')){
   setTimeout(()=>{
     const sb=document.getElementById('snackbar');
@@ -808,7 +1059,7 @@ document.getElementById('closeSB')?.addEventListener('click',()=>{
   setTimeout(()=>{if(sb)sb.style.display='none'},400);
 });
 
-// Exit intent 45s+
+/* ── EXIT INTENT 45s+ ── */
 let t=0,fired=false;
 const ti=setInterval(()=>{t++;if(t>=45)clearInterval(ti)},1000);
 document.addEventListener('mouseleave',e=>{
