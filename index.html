@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flix TV — Alles wat je kijkt voor €3,25/maand</title>
+  <title>Flix TV — Alles wat je kijkt. Nooit meer te veel betalen.</title>
   <meta name="description" content="25.000+ zenders, live sport, films & series. IPTV voor Nederland. Probeer 24u gratis.">
   <style>
 /* =============================================
@@ -174,12 +174,12 @@ img { display: block; max-width: 100%; }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(52px, 7vw, 92px);
+  font-size: clamp(48px, 6.5vw, 80px);
   font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -1px;
+  line-height: 1.0;
+  letter-spacing: -0.5px;
   color: #fff;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .hero-accent {
@@ -188,10 +188,10 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-sub {
-  font-size: 17px;
-  color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 580px;
+  font-size: 19px;
+  color: #b0b0c0;
+  line-height: 1.75;
+  max-width: 600px;
   margin-bottom: 36px;
 }
 
@@ -214,13 +214,13 @@ img { display: block; max-width: 100%; }
 .trust-item {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  font-size: 12px;
+  gap: 8px;
+  font-size: 13px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #ccc;
   background: var(--bg3);
   border: 1px solid var(--border);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: var(--radius-full);
 }
 .trust-item i { color: var(--blue); font-size: 11px; }
@@ -252,7 +252,7 @@ img { display: block; max-width: 100%; }
 .btn-wa-green { background: var(--green); color: #fff; padding: 13px 26px; font-size: 14px; }
 .btn-wa-green:hover { filter: brightness(1.12); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); color: #fff; }
 
-.btn-lg { padding: 16px 32px; font-size: 15px; }
+.btn-lg { padding: 18px 36px; font-size: 16px; font-weight: 800; }
 .w-full { width: 100%; }
 
 /* =============================================
@@ -331,7 +331,7 @@ img { display: block; max-width: 100%; }
 
 .section-header { text-align: center; margin-bottom: 48px; }
 .section-label { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
-.section-title { font-family: var(--font-display); font-size: clamp(28px, 5vw, 48px); font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: -0.5px; margin-bottom: 10px; }
+.section-title { font-family: var(--font-display); font-size: clamp(30px, 5vw, 52px); font-weight: 900; color: #fff; line-height: 1.05; letter-spacing: -0.5px; margin-bottom: 12px; }
 .section-sub { font-size: 14px; color: var(--text-muted); }
 
 .packages-grid {
@@ -339,6 +339,27 @@ img { display: block; max-width: 100%; }
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: start;
+}
+
+.packages-grid.single-pkg {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.pkg-solo {
+  transform: none !important;
+}
+
+.pkg-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 560px) {
+  .pkg-features-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) { .packages-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; } }
@@ -405,7 +426,7 @@ img { display: block; max-width: 100%; }
 .pkg-screens i { color: var(--blue); font-size: 10px; }
 
 .pkg-price-block { margin-bottom: 16px; }
-.pkg-price { font-family: var(--font-display); font-size: 52px; font-weight: 900; color: #fff; line-height: 1; }
+.pkg-price { font-family: var(--font-display); font-size: 58px; font-weight: 900; color: #fff; line-height: 1; }
 .pkg-period { font-size: 24px; }
 .pkg-was { font-size: 12px; color: var(--text-subtle); text-decoration: line-through; margin-top: 2px; }
 .pkg-per { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
@@ -429,18 +450,18 @@ img { display: block; max-width: 100%; }
 
 /* FEATURES */
 .pkg-features { list-style: none; margin-bottom: 20px; }
-.pkg-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #bbb; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-weight: 500; }
+.pkg-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #ccc; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-weight: 500; }
 .pkg-features li:last-child { border-bottom: none; }
 .pkg-features li i { color: var(--blue); font-size: 11px; margin-top: 2px; flex-shrink: 0; }
 .pkg-gold .pkg-features li i { color: var(--gold); }
 
 .pkg-btn {
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   border-radius: var(--radius);
   background: var(--blue);
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -500,9 +521,9 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: var(--radius);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
 }
 .compare-row.bad { background: rgba(255,80,80,0.06); border: 1px solid rgba(255,80,80,0.15); color: var(--text-muted); }
@@ -543,8 +564,8 @@ img { display: block; max-width: 100%; }
   padding: 28px 24px;
 }
 .how-num { font-family: var(--font-display); font-size: 52px; font-weight: 900; color: rgba(37,99,255,0.2); line-height: 1; margin-bottom: 14px; }
-.how-step h4 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-.how-step p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.how-step h4 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.how-step p { font-size: 14px; color: #999; line-height: 1.65; }
 .how-arrow { color: var(--text-subtle); font-size: 20px; flex-shrink: 0; }
 @media (max-width: 680px) { .how-arrow { display: none; } .how-grid { flex-direction: column; } }
 
@@ -562,7 +583,7 @@ img { display: block; max-width: 100%; }
   padding: 24px;
 }
 .review-stars { color: var(--gold); font-size: 16px; margin-bottom: 12px; }
-.review-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; font-style: italic; margin-bottom: 14px; }
+.review-card p { font-size: 15px; color: #aaa; line-height: 1.7; font-style: italic; margin-bottom: 14px; }
 .reviewer { font-size: 12px; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* =============================================
@@ -571,13 +592,13 @@ img { display: block; max-width: 100%; }
 .faq-section { padding: 80px 0; scroll-margin-top: 80px; }
 .faq-list { max-width: 720px; margin-top: 40px; display: flex; flex-direction: column; gap: 8px; }
 .faq-item { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-.faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; background: transparent; border: none; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; text-align: left; gap: 12px; font-family: var(--font); transition: background var(--transition); }
+.faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 22px; background: transparent; border: none; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; text-align: left; gap: 12px; font-family: var(--font); transition: background var(--transition); }
 .faq-q:hover { background: rgba(255,255,255,0.03); }
 .faq-q i { color: var(--blue); font-size: 13px; flex-shrink: 0; transition: transform var(--transition); }
 .faq-q[aria-expanded="true"] i { transform: rotate(45deg); }
 .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 20px; }
 .faq-a.open { max-height: 300px; padding: 0 20px 18px; }
-.faq-a p { font-size: 13px; color: var(--text-muted); line-height: 1.7; border-top: 1px solid var(--border); padding-top: 14px; margin: 0; }
+.faq-a p { font-size: 14px; color: #999; line-height: 1.75; border-top: 1px solid var(--border); padding-top: 14px; margin: 0; }
 
 /* =============================================
    FINAL CTA
@@ -977,9 +998,9 @@ img { display: block; max-width: 100%; }
   <div class="hero-glow"></div>
   <div class="container">
     <div class="hero-inner">
-      <div class="hero-label"><span class="pulse-dot"></span> Live — Nu beschikbaar in Nederland</div>
-      <h1>Alles wat je kijkt.<br><span class="hero-accent">Één prijs. Altijd.</span></h1>
-      <p class="hero-sub">25.000+ zenders, alle live sport, films & series — op elk apparaat. Geen abonnement. Geen incasso. Eenmalig betalen, 12 maanden genieten.</p>
+      <div class="hero-label"><span class="pulse-dot"></span> ✅ Al 15.000+ tevreden klanten in Nederland</div>
+      <h1>Stop met te veel betalen<br><span class="hero-accent">voor televisie.</span></h1>
+      <p class="hero-sub">Kijk alles wat je wil — sport, films, series, Nederlandse zenders — op je tv, telefoon of tablet. Eenmalig betalen, 12 maanden genieten. Geen abonnement. Geen verrassingen.</p>
 
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">25.000+</span><span class="stat-label">Zenders</span></div>
@@ -993,7 +1014,7 @@ img { display: block; max-width: 100%; }
 
       <div class="hero-actions">
         <a href="#pakketten" class="btn btn-primary btn-lg">
-          <i class="fas fa-play"></i> Bekijk pakketten
+          <i class="fas fa-tv"></i> Bekijk pakketten
         </a>
         <a href="https://wa.me/31600000000?text=Hallo%2C%20ik%20wil%20graag%20Flix%20TV%2024u%20gratis%20testen!" class="btn btn-ghost btn-lg" target="_blank">
           <i class="fab fa-whatsapp"></i> 24u gratis testen
@@ -1071,18 +1092,19 @@ img { display: block; max-width: 100%; }
   <div class="container">
     <div class="section-header">
       <p class="section-label">Kies je pakket</p>
-      <h2 class="section-title">Simpel. Goedkoop. Compleet.</h2>
-      <p class="section-sub">Eenmalige betaling — geen verrassingen achteraf</p>
+      <h2 class="section-title">Kies je pakket — alles inbegrepen</h2>
+      <p class="section-sub">Eénmalig betalen, daarna 12 maanden zorgeloos kijken</p>
     </div>
 
-    <div class="packages-grid">
+    <div class="packages-grid single-pkg">
 
-      <!-- BASIS -->
-      <div class="pkg-card" data-product="Flix TV Basis" data-price="75" data-retail="1800" data-duration="12 maanden">
-        <div class="pkg-ribbon">BASIS</div>
+      <!-- PREMIUM -->
+      <div class="pkg-card pkg-featured pkg-solo" data-product="Flix TV Premium" data-price="75" data-retail="1800" data-duration="12 maanden">
+        <div class="pkg-popular-badge">🏆 MEEST GEKOZEN — 15.000+ KLANTEN</div>
+        <div class="pkg-ribbon featured-ribbon">PREMIUM</div>
         <div class="pkg-top">
-          <h3 class="pkg-name">Basis</h3>
-          <div class="pkg-screens"><i class="fas fa-tv"></i> 1 scherm</div>
+          <h3 class="pkg-name">Premium</h3>
+          <div class="pkg-screens"><i class="fas fa-tv"></i><i class="fas fa-tv"></i> 2 schermen tegelijk</div>
         </div>
         <div class="pkg-price-block">
           <div class="pkg-price">€75<span class="pkg-period">,00</span></div>
@@ -1094,107 +1116,28 @@ img { display: block; max-width: 100%; }
           <div class="pkg-savings-row ours"><span>Onze prijs:</span><span class="s-ours">€75,00 / jaar</span></div>
           <div class="pkg-savings-total"><i class="fas fa-piggy-bank"></i> Jij bespaart <strong>€1.725,00+</strong></div>
         </div>
-        <ul class="pkg-features">
-          <li><i class="fas fa-check"></i> 12 maanden toegang</li>
-          <li><i class="fas fa-check"></i> 25.000+ TV-kanalen</li>
-          <li><i class="fas fa-check"></i> 69.000+ films & series</li>
-          <li><i class="fas fa-check"></i> Alle live sport</li>
-          <li><i class="fas fa-check"></i> SD / HD / Full HD / 4K</li>
-          <li><i class="fas fa-check"></i> EPG & Catch-up</li>
-          <li><i class="fas fa-check"></i> 15 dagen geld terug</li>
-        </ul>
-        <button class="btn-order pkg-btn" data-product="Flix TV Basis" data-price="75" data-retail="1800" data-duration="12 maanden">
-          <i class="fas fa-shopping-cart"></i> Bestel nu
+        <div class="pkg-features-grid">
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> 12 maanden toegang</li>
+            <li><i class="fas fa-check"></i> 25.000+ TV-kanalen</li>
+            <li><i class="fas fa-check"></i> 69.000+ films & series</li>
+            <li><i class="fas fa-check"></i> Alle live sport inbegrepen</li>
+            <li><i class="fas fa-check"></i> Eredivisie, Champions League</li>
+          </ul>
+          <ul class="pkg-features">
+            <li><i class="fas fa-check"></i> Formule 1, Premier League</li>
+            <li><i class="fas fa-check"></i> SD / HD / Full HD / 4K / <strong>8K</strong></li>
+            <li><i class="fas fa-check"></i> EPG & Catch-up</li>
+            <li><i class="fas fa-check"></i> Gratis IBO Player licentie 🎁</li>
+            <li><i class="fas fa-check"></i> 15 dagen geld-teruggarantie</li>
+          </ul>
+        </div>
+        <button class="btn-order pkg-btn featured-btn" data-product="Flix TV Premium" data-price="75" data-retail="1800" data-duration="12 maanden">
+          <i class="fas fa-shopping-cart"></i> Bestel nu — €75,00
         </button>
-        <div class="pkg-wa">of <a href="https://wa.me/31600000000?text=Ik%20wil%20Flix%20TV%20Basis%20bestellen!" target="_blank"><i class="fab fa-whatsapp"></i> via WhatsApp</a></div>
+        <div class="pkg-wa">of direct <a href="https://wa.me/31600000000?text=Ik%20wil%20Flix%20TV%20Premium%20bestellen!" target="_blank"><i class="fab fa-whatsapp"></i> via WhatsApp bestellen</a></div>
       </div>
 
-      <!-- PREMIUM — MOST POPULAR -->
-      <div class="pkg-card pkg-featured" data-product="Flix TV Premium" data-price="59" data-retail="1800" data-duration="12 maanden">
-        <div class="pkg-popular-badge">🏆 MEEST GEKOZEN</div>
-        <div class="pkg-ribbon featured-ribbon">PREMIUM</div>
-        <div class="pkg-top">
-          <h3 class="pkg-name">Premium</h3>
-          <div class="pkg-screens"><i class="fas fa-tv"></i><i class="fas fa-tv"></i> 2 schermen</div>
-        </div>
-        <div class="pkg-price-block">
-          <div class="pkg-price">€59<span class="pkg-period">,00</span></div>
-          <div class="pkg-was">losse diensten: €1.800,00+ / jaar</div>
-          <div class="pkg-per">Omgerekend slechts <strong>€4,92 / maand</strong></div>
-        </div>
-        <div class="pkg-savings">
-          <div class="pkg-savings-row"><span>Normaal (los):</span><span class="s-retail">€1.800,00+ / jaar</span></div>
-          <div class="pkg-savings-row ours"><span>Onze prijs:</span><span class="s-ours">€59,00 / jaar</span></div>
-          <div class="pkg-savings-total"><i class="fas fa-piggy-bank"></i> Jij bespaart <strong>€1.741,00+</strong></div>
-        </div>
-        <ul class="pkg-features">
-          <li><i class="fas fa-check"></i> 12 maanden toegang</li>
-          <li><i class="fas fa-check"></i> 25.000+ TV-kanalen</li>
-          <li><i class="fas fa-check"></i> 69.000+ films & series</li>
-          <li><i class="fas fa-check"></i> Alle live sport</li>
-          <li><i class="fas fa-check"></i> SD / HD / Full HD / 4K / <strong>8K</strong></li>
-          <li><i class="fas fa-check"></i> EPG & Catch-up</li>
-          <li><i class="fas fa-check"></i> Premium server 🏅</li>
-          <li><i class="fas fa-check"></i> Gratis IBO Player licentie 🎁</li>
-          <li><i class="fas fa-check"></i> 15 dagen geld terug</li>
-        </ul>
-        <button class="btn-order pkg-btn featured-btn" data-product="Flix TV Premium" data-price="59" data-retail="1800" data-duration="12 maanden">
-          <i class="fas fa-shopping-cart"></i> Bestel nu
-        </button>
-        <div class="pkg-wa">of <a href="https://wa.me/31600000000?text=Ik%20wil%20Flix%20TV%20Premium%20bestellen!" target="_blank"><i class="fab fa-whatsapp"></i> via WhatsApp</a></div>
-      </div>
-
-      <!-- GOUD -->
-      <div class="pkg-card pkg-gold" data-product="Flix TV Goud" data-price="69" data-retail="1800" data-duration="12 maanden">
-        <div class="pkg-ribbon gold-ribbon">GOUD 👑</div>
-        <div class="pkg-top">
-          <h3 class="pkg-name">Goud</h3>
-          <div class="pkg-screens"><i class="fas fa-tv"></i><i class="fas fa-tv"></i><i class="fas fa-tv"></i> 3 schermen</div>
-        </div>
-        <div class="pkg-price-block">
-          <div class="pkg-price">€69<span class="pkg-period">,00</span></div>
-          <div class="pkg-was">losse diensten: €1.800,00+ / jaar</div>
-          <div class="pkg-per">Omgerekend slechts <strong>€5,75 / maand</strong></div>
-        </div>
-        <div class="pkg-savings">
-          <div class="pkg-savings-row"><span>Normaal (los):</span><span class="s-retail">€1.800,00+ / jaar</span></div>
-          <div class="pkg-savings-row ours"><span>Onze prijs:</span><span class="s-ours">€69,00 / jaar</span></div>
-          <div class="pkg-savings-total"><i class="fas fa-piggy-bank"></i> Jij bespaart <strong>€1.731,00+</strong></div>
-        </div>
-        <ul class="pkg-features">
-          <li><i class="fas fa-check"></i> 12 maanden toegang</li>
-          <li><i class="fas fa-check"></i> 25.000+ TV-kanalen</li>
-          <li><i class="fas fa-check"></i> 69.000+ films & series</li>
-          <li><i class="fas fa-check"></i> Alle live sport</li>
-          <li><i class="fas fa-check"></i> SD / HD / Full HD / 4K / <strong>8K</strong></li>
-          <li><i class="fas fa-check"></i> EPG & Catch-up</li>
-          <li><i class="fas fa-check"></i> Premium server 🏅</li>
-          <li><i class="fas fa-check"></i> Gratis IBO Player licentie 🎁</li>
-          <li><i class="fas fa-check"></i> Drie schermen tegelijk</li>
-          <li><i class="fas fa-check"></i> 15 dagen geld terug</li>
-        </ul>
-        <button class="btn-order pkg-btn gold-btn" data-product="Flix TV Goud" data-price="69" data-retail="1800" data-duration="12 maanden">
-          <i class="fas fa-shopping-cart"></i> Bestel nu
-        </button>
-        <div class="pkg-wa">of <a href="https://wa.me/31600000000?text=Ik%20wil%20Flix%20TV%20Goud%20bestellen!" target="_blank"><i class="fab fa-whatsapp"></i> via WhatsApp</a></div>
-      </div>
-
-    </div>
-
-    <!-- Free test CTA -->
-    <div class="free-test-cta">
-      <div class="ftc-inner">
-        <div class="ftc-left">
-          <span class="ftc-icon">🎁</span>
-          <div>
-            <strong>Wil je eerst proberen?</strong>
-            <span>Vraag een gratis 24u test aan — geen betaling, geen verplichtingen.</span>
-          </div>
-        </div>
-        <a href="https://wa.me/31600000000?text=Hallo%2C%20ik%20wil%20graag%20Flix%20TV%2024u%20gratis%20testen!" class="btn btn-wa-green" target="_blank">
-          <i class="fab fa-whatsapp"></i> Gratis 24u testen
-        </a>
-      </div>
     </div>
 
     <!-- ADDON DIVIDER -->
@@ -1211,7 +1154,7 @@ img { display: block; max-width: 100%; }
           <div class="addon-icon spotify-icon"><i class="fab fa-spotify"></i></div>
           <div>
             <h3 class="addon-name">Spotify Premium</h3>
-            <p class="addon-sub">Muziek & podcasts zonder reclame</p>
+            <p class="addon-sub">Spotify zonder reclame op je eigen account</p>
           </div>
         </div>
         <div class="addon-tiers">
@@ -1316,12 +1259,12 @@ img { display: block; max-width: 100%; }
     <div class="why-grid">
       <div class="why-text">
         <p class="section-label">Waarom Flix TV?</p>
-        <h2 class="section-title">Meer kanalen.<br>Minder betalen.</h2>
-        <p class="why-body">Kabeltelevisie kost je al gauw €50–€80 per maand. Dat is meer dan €900 per jaar — voor minder dan wat wij bieden. Flix TV geeft je alles: live sport, internationale zenders, films, series en meer. Eenmalig betaald, 12 maanden van genieten.</p>
+        <h2 class="section-title">Betaal niet langer te veel<br>voor televisie.</h2>
+        <p class="why-body">De meeste mensen betalen €50 tot €80 per maand aan Ziggo of KPN — dat is meer dan €900 per jaar. Met Flix TV betaal je eenmalig en kijk je 12 maanden alles: sport, films, series, Nederlandse zenders en veel meer. Op je tv, telefoon of tablet.</p>
         <div class="compare-block">
           <div class="compare-row bad"><i class="fas fa-times"></i><span>Kabel TV</span><strong>€720–€960 / jaar</strong></div>
           <div class="compare-row bad"><i class="fas fa-times"></i><span>Netflix + Ziggo + ESPN</span><strong>€500+ / jaar</strong></div>
-          <div class="compare-row good"><i class="fas fa-check"></i><span>Flix TV Basis</span><strong>€75 / jaar</strong></div>
+          <div class="compare-row good"><i class="fas fa-check"></i><span>Flix TV Basis</span><strong>€75,00 / jaar</strong></div>
         </div>
       </div>
       <div class="why-devices">
@@ -1345,19 +1288,19 @@ img { display: block; max-width: 100%; }
       <div class="how-step">
         <div class="how-num">01</div>
         <h4>Kies je pakket</h4>
-        <p>Selecteer het pakket dat bij jou past en klik op Bestel nu.</p>
+        <p>Kies het pakket dat bij jou past. Twijfel je? Vraag eerst een gratis test aan.</p>
       </div>
       <div class="how-arrow"><i class="fas fa-arrow-right"></i></div>
       <div class="how-step">
         <div class="how-num">02</div>
         <h4>Betaal via WhatsApp</h4>
-        <p>Wij begeleiden je persoonlijk via WhatsApp. Betaling via PayPal, Bankoverschrijving of Paysafecard.</p>
+        <p>Na je bestelling nemen wij contact op via WhatsApp. Wij helpen je stap voor stap. Betaling via PayPal, Bankoverschrijving of Paysafecard.</p>
       </div>
       <div class="how-arrow"><i class="fas fa-arrow-right"></i></div>
       <div class="how-step">
         <div class="how-num">03</div>
         <h4>Direct actief</h4>
-        <p>Na betaling sturen wij je inloggegevens. Installeer de app en geniet direct.</p>
+        <p>Na betaling activeren wij alles voor je. Wij helpen je ook met de installatie op je tv of telefoon.</p>
       </div>
     </div>
   </div>
@@ -1371,23 +1314,23 @@ img { display: block; max-width: 100%; }
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>"Geweldig product! Alle Eredivisie wedstrijden in 4K. Werkt perfect op mijn Smart TV."</p>
-        <div class="reviewer">— Mohamed A., Amsterdam</div>
+        <p>"Eindelijk geen duur Ziggo abonnement meer. Alle wedstrijden, alle kanalen — gewoon via mijn tv. Werkt perfect."</p>
+        <div class="reviewer">— Ahmed B., Amsterdam</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>"Al 2 jaar klant. Beste investering ooit. Heb mijn Ziggo abonnement opgezegd en bespaar nu €600 per jaar."</p>
-        <div class="reviewer">— Karim B., Rotterdam</div>
+        <p>"Eerst twijfelde ik, maar na de gratis test was ik direct overtuigd. Heb mijn abonnement opgezegd en bespaar nu honderden euro's per jaar."</p>
+        <div class="reviewer">— Peter V., Rotterdam</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>"Heel makkelijk via WhatsApp geregeld. Binnen 10 minuten alles actief. Top service!"</p>
-        <div class="reviewer">— Fatima E., Utrecht</div>
+        <p>"Via WhatsApp heel persoonlijk geholpen. Ze installeerden alles op mijn tv. Nooit gedacht dat het zo makkelijk kon."</p>
+        <div class="reviewer">— Sandra K., Utrecht</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>"Champions League, Premier League, Formule 1 — allemaal in één pakket. Nooit meer apart abonnement nodig."</p>
-        <div class="reviewer">— Youssef K., Den Haag</div>
+        <p>"Alle grote wedstrijden, Formule 1, en gewoon NPO en RTL — alles op één plek. Mijn man en ik zijn er heel blij mee."</p>
+        <div class="reviewer">— Marianne D., Den Haag</div>
       </div>
     </div>
   </div>
@@ -1401,11 +1344,11 @@ img { display: block; max-width: 100%; }
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span>Wat is IPTV precies?</span><i class="fas fa-plus"></i></button>
-        <div class="faq-a"><p>IPTV (Internet Protocol Television) is televisie via het internet. Je krijgt toegang tot duizenden zenders, films en series via een app op elk apparaat — zonder antenne of schotel.</p></div>
+        <div class="faq-a"><p>Flix TV is televisie via het internet. Je kijkt via een gratis app op je Smart TV, telefoon of tablet. Geen schotel, geen antenne, geen gedoe. Gewoon aanzetten en kijken.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span>Op welke apparaten werkt Flix TV?</span><i class="fas fa-plus"></i></button>
-        <div class="faq-a"><p>Flix TV werkt op Smart TV, telefoon, tablet, laptop, Fire Stick, MAG-box en meer. Wij helpen je met de installatie via WhatsApp.</p></div>
+        <div class="faq-a"><p>Flix TV werkt op bijna elk apparaat: Smart TV, telefoon, tablet, laptop en Fire Stick. Weet je niet hoe je het installeert? Geen probleem — wij helpen je stap voor stap via WhatsApp.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span>Hoe werkt de betaling?</span><i class="fas fa-plus"></i></button>
@@ -1432,8 +1375,8 @@ img { display: block; max-width: 100%; }
   <div class="container">
     <div class="final-cta-inner">
       <div class="final-cta-noise"></div>
-      <h2>Klaar om te beginnen?</h2>
-      <p>Probeer 24u gratis — of bestel direct je pakket.</p>
+      <h2>Bespaar vandaag nog honderden euro's</h2>
+      <p>Twijfel je nog? Probeer Flix TV 24 uur gratis. Geen betaling, geen verplichtingen.</p>
       <div class="final-actions">
         <a href="#pakketten" class="btn btn-primary btn-lg">Bekijk pakketten</a>
         <a href="https://wa.me/31600000000?text=Hallo%2C%20ik%20wil%20graag%20Flix%20TV%2024u%20gratis%20testen!" class="btn btn-wa-green btn-lg" target="_blank">
