@@ -303,19 +303,30 @@ button{font-family:var(--font);cursor:pointer;border:none}
 
 /* MODAL */
 .mov{position:fixed;inset:0;background:rgba(15,39,72,.75);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}
-.mbox{background:#fff;border-radius:var(--r2);width:100%;max-width:480px;overflow:hidden;box-shadow:0 20px 60px rgba(15,39,72,.3);animation:mIn .28s cubic-bezier(.4,0,.2,1)}
+.mbox{background:#fff;border-radius:var(--r2);width:100%;max-width:460px;overflow:hidden;box-shadow:0 20px 60px rgba(15,39,72,.3);animation:mIn .28s cubic-bezier(.4,0,.2,1)}
 @keyframes mIn{from{opacity:0;transform:scale(.94) translateY(12px)}to{opacity:1;transform:scale(1) translateY(0)}}
 .mhead{background:var(--navy);padding:20px 24px;display:flex;align-items:center;justify-content:space-between}
 .mhead h2{font-family:var(--serif);font-size:20px;font-weight:900;color:#fff}
 .mclose{background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);font-size:20px;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--t)}
 .mclose:hover{background:rgba(255,255,255,.2);color:#fff}
-.mbody{padding:24px;max-height:80vh;overflow-y:auto}
-.mprod{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.mprod strong{font-size:15px;font-weight:700;color:var(--navy)}
-.mprod span{font-size:12px;color:var(--text2);display:block;margin-top:2px}
-.mprice{font-family:var(--serif);font-size:26px;font-weight:900;color:var(--red)}
-.minfo{display:flex;align-items:flex-start;gap:9px;background:#edf9f3;border:1px solid #a8e6c0;border-radius:8px;padding:11px 13px;margin-bottom:16px;font-size:13px;color:#0f4a2a;line-height:1.5}
-.minfo i{color:var(--green);flex-shrink:0;margin-top:1px}
+.mbody{padding:22px;max-height:85vh;overflow-y:auto}
+
+/* Productoverzicht in modal — 1 rij per product */
+.morder-items{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:14px}
+.morder-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:12px}
+.morder-row+.morder-row{border-top:1px solid var(--border)}
+.morder-name{font-size:14px;font-weight:700;color:var(--navy);line-height:1.3}
+.morder-dur{font-size:11px;color:var(--text3);margin-top:2px}
+.morder-price{font-family:var(--serif);font-size:22px;font-weight:900;color:var(--navy);white-space:nowrap;flex-shrink:0}
+.morder-total{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--navy);border-radius:0 0 var(--r) var(--r)}
+.morder-total span{font-size:12px;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.5px}
+.morder-total strong{font-family:var(--serif);font-size:22px;font-weight:900;color:#fff}
+
+.msavings{display:flex;align-items:center;gap:9px;background:#edf9f3;border:1px solid #a8e6c0;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:#0f4a2a;font-weight:700;line-height:1.4}
+.msavings i{color:var(--green);flex-shrink:0;font-size:16px}
+.minfo-wa{display:flex;align-items:flex-start;gap:9px;background:#f0f4ff;border:1px solid #c5d0f0;border-radius:8px;padding:10px 13px;margin-bottom:16px;font-size:13px;color:#2a3a6a;line-height:1.5}
+.minfo-wa i{color:#4a6af0;flex-shrink:0;margin-top:1px}
+
 .paylbl{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:10px}
 .payopts{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
 .popt{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;background:#fff;font-size:14px;font-weight:600;color:var(--text);transition:all var(--t)}
@@ -693,7 +704,7 @@ button{font-family:var(--font);cursor:pointer;border:none}
       <div class="revcard"><div class="revstars">★★★★★</div><p>"Eindelijk geen duur Telenet abonnement meer. Alle wedstrijden, alle kanalen — gewoon via mijn tv. VRT, VTM, alles erbij. Werkt perfect."</p><div class="revname">— Ahmed B.</div><div class="revloc">📍 Antwerpen</div></div>
       <div class="revcard"><div class="revstars">★★★★★</div><p>"Eerst twijfelde ik, maar na de gratis test was ik direct overtuigd. Heb mijn VOO abonnement opgezegd en bespaar nu honderden euro's per jaar."</p><div class="revname">— Peter V.</div><div class="revloc">📍 Gent</div></div>
       <div class="revcard"><div class="revstars">★★★★★</div><p>"Via WhatsApp heel persoonlijk geholpen. Ze installeerden alles op mijn smart tv. Jupiler Pro League, Champions League — alles erop. Nooit gedacht dat het zo makkelijk kon."</p><div class="revname">— Sandra K.</div><div class="revloc">📍 Brussel</div></div>
-      <div class="revcard"><div class="revstars">★★★★★</div><p>"La Une, RTL-TVI, Canvas — en alle grote sportwedstrijden erbij. Mijn man en ik zijn er heel blij mee."</p><div class="revname">— Marianne D.</div><div class="revloc">📍 Luik</div></div>
+      <div class="revcard"><div class="revstars">★★★★★</div><p>"La Une, RTL-TVI, Canvas — en alle grote sportwedstrijden erbij. Mijn man en ik zijn er heel blij mee. Orange mag ons niet meer."</p><div class="revname">— Marianne D.</div><div class="revloc">📍 Luik</div></div>
     </div>
   </div>
 </section>
@@ -769,9 +780,12 @@ button{font-family:var(--font);cursor:pointer;border:none}
   <div class="mbox">
     <div class="mhead"><h2>Bevestig je bestelling</h2><button id="closeModal" class="mclose">&times;</button></div>
     <div class="mbody">
-      <div id="mProduct" class="mprod"></div>
-      <div id="mSavings" class="minfo" style="display:none"><i class="fas fa-piggy-bank"></i> <span id="mSavingsText"></span></div>
-      <div class="minfo"><i class="fas fa-info-circle"></i> Je wordt doorgestuurd naar WhatsApp. Wij regelen de rest — inclusief installatie op je tv.</div>
+      <!-- Productoverzicht: nette rijen per product + totaal -->
+      <div class="morder-items" id="mOrderItems"></div>
+      <!-- Besparingsbanner (alleen als upsell gekozen) -->
+      <div class="msavings" id="mSavings" style="display:none"><i class="fas fa-piggy-bank"></i><span id="mSavingsText"></span></div>
+      <!-- WhatsApp info -->
+      <div class="minfo-wa"><i class="fas fa-info-circle"></i> Je wordt doorgestuurd naar WhatsApp. Wij regelen de rest — inclusief installatie op je tv.</div>
       <div class="paylbl">Hoe wil je betalen?</div>
       <div class="payopts">
         <label class="popt"><input type="radio" name="pay" value="PayPal" checked><i class="fab fa-paypal"></i> PayPal</label>
@@ -810,8 +824,8 @@ button{font-family:var(--font);cursor:pointer;border:none}
 <script>
 'use strict';
 const WA='31600000000';
-let cur=null;          // het aangeklikte product
-let upsellChosen=[];   // gekozen extra's vanuit upsell popup
+let cur=null;
+let upsellChosen=[];
 
 /* ── HAMBURGER ── */
 const hbg=document.getElementById('hbg'),nl=document.getElementById('navLinks');
@@ -847,16 +861,14 @@ function rotateSP(){
 setInterval(rotateSP,5000);
 
 /* ── UPSELL DEFINITIES ──
-   Per product 1 relevante upsell popup tonen (de meest impactvolle).
-   Daarna volgt het order modal.
-   Flix TV  → toon Spotify Duo als upsell
-   Spotify  → toon Flix TV Premium als upsell
-   YouTube  → toon Flix TV Premium als upsell
+   flixTV: willekeurig Spotify ÓÓÓF YouTube tonen (elke keer anders)
+   spotify: toon Flix TV
+   youtube: toon Flix TV
 */
 const upsellDefs={
-  flixTV:{
+  flixTV_spotify:{
     ico:'🎧',
-    title:'Geen reclame tijdens je favoriete nummers?',
+    title:'Luister onbeperkt, reclamevrij',
     sub:'Voeg Spotify toe en luister onbeperkt, reclamevrij — op je eigen account.',
     opts:[
       {name:'Spotify Premium Individueel', price:39,  retail:155.88, sub:'1 account · 12 maanden'},
@@ -864,10 +876,20 @@ const upsellDefs={
       {name:'Spotify Premium Familie',     price:109, retail:263.88, sub:'6 accounts · 12 maanden'},
     ]
   },
+  flixTV_youtube:{
+    ico:'😤',
+    title:'Reclames zat? Dat hoeft niet.',
+    sub:'Elke video onderbroken door reclames. Met YouTube Premium nooit meer een reclame — reclamevrij op je eigen account.',
+    opts:[
+      {name:'YouTube Premium Individueel', price:39,  retail:167.88, sub:'1 account · 12 maanden'},
+      {name:'YouTube Premium Duo',         price:69,  retail:239.88, sub:'2 accounts · 12 maanden', default:true},
+      {name:'YouTube Premium Familie',     price:119, retail:359.88, sub:'6 accounts · 12 maanden'},
+    ]
+  },
   spotify:{
     ico:'📺',
     title:'Alles in één app? 🍿',
-    sub:'Bespaar €1.700+ per jaar met Flix TV — 25.000+ zenders, live sport & films.',
+    sub:'Bespaar €1.700+ per jaar met Flix TV — 25.000+ zenders, live sport & films op je eigen tv.',
     opts:[
       {name:'Flix TV Premium', price:75, retail:1800, sub:'25.000+ zenders · live sport · 12 maanden', default:true},
     ]
@@ -875,7 +897,7 @@ const upsellDefs={
   youtube:{
     ico:'📺',
     title:'Alles in één app? 🍿',
-    sub:'Bespaar €1.700+ per jaar met Flix TV — 25.000+ zenders, live sport & films.',
+    sub:'Bespaar €1.700+ per jaar met Flix TV — 25.000+ zenders, live sport & films op je eigen tv.',
     opts:[
       {name:'Flix TV Premium', price:75, retail:1800, sub:'25.000+ zenders · live sport · 12 maanden', default:true},
     ]
@@ -883,10 +905,13 @@ const upsellDefs={
 };
 
 function getUpsellKey(name){
-  if(name.includes('Flix TV')) return 'flixTV';
+  if(name.includes('Flix TV')){
+    // Willekeurig Spotify of YouTube tonen
+    return Math.random()<0.5 ? 'flixTV_spotify' : 'flixTV_youtube';
+  }
   if(name.includes('Spotify')) return 'spotify';
   if(name.includes('YouTube')) return 'youtube';
-  return 'flixTV';
+  return 'flixTV_spotify';
 }
 
 /* ── ORDER TRIGGERS ── */
@@ -908,40 +933,48 @@ function showUpsellPopup(){
   const def=upsellDefs[key];
   if(!def){openOrderModal();return;}
 
-  // Header
   document.getElementById('up-ico').textContent=def.ico;
   document.getElementById('up-title').textContent=def.title;
   document.getElementById('up-sub').textContent=def.sub;
 
-  // Bereken max besparing voor savepill
-  const maxSave=Math.max(...def.opts.map(o=>o.retail-o.price));
-  document.getElementById('up-savetext').textContent=`Bespaar €${maxSave.toFixed(0)}+ extra`;
-
-  // Render radio opties
+  // Render opties
   const container=document.getElementById('up-opts');
   container.innerHTML=def.opts.map((o,i)=>`
-    <label class="upopt">
-      <input type="radio" name="upsel" value="${o.name}" data-price="${o.price}" data-retail="${o.retail}" ${o.default||i===0?'checked':''}>
+    <label class="upopt" id="upopt-${i}">
+      <input type="radio" name="upsel" value="${o.name}"
+        data-price="${o.price}" data-retail="${o.retail}"
+        ${o.default||i===0?'checked':''}
+        onchange="updateSavePill()">
       <div class="upopt-body">
         <div class="upopt-name">${o.name}</div>
         <div class="upopt-sub">${o.sub}</div>
       </div>
-      <div>
+      <div style="text-align:right">
         <span class="upopt-price">€${o.price.toFixed(2).replace('.',',')}</span>
         <span class="upopt-was">€${o.retail.toFixed(2).replace('.',',')}</span>
       </div>
     </label>
   `).join('');
 
+  // Toon savepill op basis van geselecteerde optie
+  updateSavePill();
+
   document.getElementById('upsellPopup').style.display='flex';
   document.body.style.overflow='hidden';
+}
+
+/* Herbereken savepill dynamisch bij radio-change */
+function updateSavePill(){
+  const sel=document.querySelector('input[name="upsel"]:checked');
+  if(!sel) return;
+  const saving=(parseFloat(sel.dataset.retail)-parseFloat(sel.dataset.price)).toFixed(0);
+  document.getElementById('up-savetext').textContent=`Bespaar €${saving} extra`;
 }
 
 function closeUpsellPopup(){
   document.getElementById('upsellPopup').style.display='none';
 }
 
-// Accepteer upsell
 document.getElementById('up-accept')?.addEventListener('click',()=>{
   const sel=document.querySelector('input[name="upsel"]:checked');
   if(sel){
@@ -955,14 +988,12 @@ document.getElementById('up-accept')?.addEventListener('click',()=>{
   openOrderModal();
 });
 
-// Sla upsell over
 document.getElementById('up-skip')?.addEventListener('click',()=>{
   upsellChosen=[];
   closeUpsellPopup();
   openOrderModal();
 });
 
-// Klik buiten popup
 document.getElementById('upsellPopup')?.addEventListener('click',e=>{
   if(e.target.id==='upsellPopup'){
     upsellChosen=[];
@@ -971,36 +1002,43 @@ document.getElementById('upsellPopup')?.addEventListener('click',e=>{
   }
 });
 
-/* ── STAP 2: ORDER MODAL ── */
+/* ── STAP 2: ORDER MODAL — nette rijen ── */
 function openOrderModal(){
   if(!cur) return;
 
-  // Totaal berekenen incl. upsells
   const upsellTotal=upsellChosen.reduce((s,u)=>s+u.price,0);
   const grandTotal=cur.price+upsellTotal;
 
-  // Product header
-  const el=document.getElementById('mProduct');
-  const items=[{name:cur.p,price:cur.price},...upsellChosen];
-  el.innerHTML=items.map((it,i)=>`
-    <div style="${i>0?'border-top:1px solid var(--border);padding-top:8px;margin-top:8px':''}">
-      <strong>${it.name}</strong>
-      <span>12 maanden</span>
+  // Bouw product-rijen
+  const container=document.getElementById('mOrderItems');
+  const allItems=[{name:cur.p,price:cur.price},...upsellChosen];
+  let rowsHTML=allItems.map(it=>`
+    <div class="morder-row">
+      <div>
+        <div class="morder-name">${it.name}</div>
+        <div class="morder-dur">12 maanden</div>
+      </div>
+      <span class="morder-price">€${it.price.toFixed(2).replace('.',',')}</span>
     </div>
-    <span class="mprice" style="font-size:${i>0?'18px':'26px'}">€${it.price.toFixed(2).replace('.',',')}</span>
   `).join('');
 
-  // Besparingsbanner
+  // Totaalregel onderaan (altijd tonen, ook bij 1 product)
+  rowsHTML+=`
+    <div class="morder-total">
+      <span>Totaal</span>
+      <strong>€${grandTotal.toFixed(2).replace('.',',')}</strong>
+    </div>
+  `;
+  container.innerHTML=rowsHTML;
+
+  // Besparingsbanner — alleen als upsell gekozen
   const savEl=document.getElementById('mSavings');
   const savTxt=document.getElementById('mSavingsText');
   if(upsellChosen.length>0){
     const totalRetail=cur.retail+upsellChosen.reduce((s,u)=>s+u.retail,0);
-    const saving=totalRetail-grandTotal;
-    savTxt.textContent=`💰 Jij bespaart €${saving.toFixed(2).replace('.',',')} ten opzichte van normale prijzen`;
+    const saving=(totalRetail-grandTotal).toFixed(2).replace('.',',');
+    savTxt.textContent=`Jij bespaart €${saving} ten opzichte van normale prijzen`;
     savEl.style.display='flex';
-    savEl.style.background='#edf9f3';
-    savEl.style.borderColor='#a8e6c0';
-    savEl.style.color='#0f4a2a';
   } else {
     savEl.style.display='none';
   }
@@ -1026,7 +1064,7 @@ document.getElementById('sendOrder')?.addEventListener('click',()=>{
   msg+=`📦 *Pakket:* ${cur.p} — €${cur.price.toFixed(2)}\n`;
   upsellChosen.forEach(u=>{ msg+=`➕ *Extra:* ${u.name} — €${u.price.toFixed(2)}\n`; });
   msg+=`\n💰 *Totaal:* €${grandTotal.toFixed(2)}\n`;
-  msg+=`📅 *Duur:* ${cur.dur}\n`;
+  msg+=`📅 *Duur:* 12 maanden\n`;
   msg+=`💳 *Betaalmethode:* ${pay}\n\n`;
   msg+=`Graag hoor ik hoe ik verder kan gaan. Bedankt!`;
   window.open(`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`,'_blank');
